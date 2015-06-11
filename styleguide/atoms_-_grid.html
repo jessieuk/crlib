@@ -1,0 +1,510 @@
+
+<!DOCTYPE html>
+<html ng-app="crlib">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Atoms - Grid</title>
+
+    <!-- Styleguide CSS -->
+    <link rel="stylesheet" href="css/styleguide.css">
+
+    <!-- Source CSS -->
+    
+      
+        <link rel="stylesheet" href="../css/crlib.styles.css">
+      
+    
+
+    <!--[if lt IE 9]>
+      <script src="js/polyfill/html5shiv.js"></script>
+      <script src="js/polyfill/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+  <body class="crlib-body"  ng-controller="MainController">
+
+    <div class="sb-slidebar sb-left crlib-sidenav sb-style-push">
+
+      
+      
+        
+        
+          
+        
+      
+        
+        
+          
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+          
+        
+      
+        
+        
+      
+
+      <nav class="crlib-nav">
+        <ul>
+          
+            <li><a href="index.html">Home</a></li>
+          
+        </ul>
+        
+        <div class="crlib-cat">
+          <h3 class="crlib-cat--molecules">Molecules</h3>
+          <span class="crlib-inline crlib-inline--molecules">
+        </div>
+          <ul>
+          
+            
+              
+              
+                <li><a href="molecules_-_badge.html">Badge</a></li>
+              
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+          </ul>
+        
+        <div class="crlib-cat">
+          <h3 class="crlib-cat--atoms">Atoms</h3>
+          <span class="crlib-inline crlib-inline--atoms">
+        </div>
+          <ul>
+          
+            
+          
+            
+              
+              
+                <li><a href="atoms_-_colours.html">Colours</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="atoms_-_ctas.html">CTAs</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="atoms_-_form_elments.html">Form elments</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a class="active" href="atoms_-_grid.html">Grid</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="atoms_-_typography.html">Typography</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="atoms_-_icons.html">Icons</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="atoms_-_tables_and_lists.html">Tables and lists</a></li>
+              
+            
+          
+            
+          
+            
+          
+          </ul>
+        
+        <div class="crlib-cat">
+          <h3 class="crlib-cat--organisims">Organisims</h3>
+          <span class="crlib-inline crlib-inline--organisims">
+        </div>
+          <ul>
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+              
+                <li><a href="organisims_-_panes.html">Panes</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="organisims_-_rows.html">Rows</a></li>
+              
+            
+          
+          </ul>
+        
+      </nav>
+    </div>
+
+    <div class="crlib-header sb-slide">
+        <span class="crlib-logo">PATTERN LIBRARY</span>
+      <div id="open-left" class="crlib-menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="crlib-search-wrapper" ng-controller="TypeaheadCtrl">
+        <input id="crlib-search" type="text" class="form-control crlib-search" ng-model="customSelected" placeholder="Search" typeahead="data as data.title for data in searchData | filter:{title:$viewValue}" typeahead-template-url="customTemplate.html" class="form-control" typeahead-on-select="onSelect($item, $model, $label)">
+      </div>
+    </div>
+
+    <div id="sb-site">
+
+      <div class="crlib-container">
+
+        <nav id="crlib-inside-nav" class="crlib-inside-nav" bs-affix>
+          <h2 class="">Grid</h2>
+          <ul bs-scrollspy-list data-offset="-30">
+            
+              
+                <li><a href="#Grid gutter">Grid gutter</a></li>
+              
+            
+              
+                <li><a href="#Grid sizes">Grid sizes</a></li>
+              
+            
+              
+                <li><a href="#Mixed grids">Mixed grids</a></li>
+              
+            
+          </ul>
+        </nav>
+
+        <div class="crlib-content-wrapper clearfix">
+          <div class="crlib-content">
+            <div class="crlib-inline crlib-inline--red">123</div>
+            <div class="crlib-inline crlib-inline--blue">123</div>
+            <div class="crlib-inline crlib-inline--yellow">123</div><h1 id="Grid gutter">Grid gutter</h1>
+
+<h1 id="Grid sizes">Grid sizes</h1>
+
+<p>{% example html %}
+<button class="btn" type="button">Button button</button>
+<a class="btn" href="#" role="button">Link button</a>
+&lt;%= endexample %&gt;</p>
+
+<h1 id="Mixed grids">Mixed grids</h1>
+
+        </div>
+      </div>
+    </div>
+
+    <footer class="crlib-footer">
+     
+    </footer>  
+  </div>
+
+  <script src="js/vendors.min.js"></script>
+  <script type="text/javascript">
+    var jQuery_no_conflict = $.noConflict(true);
+  </script>
+  <script src="js/main.js"></script>
+  <script type="text/javascript">
+    function TypeaheadCtrl($scope) {
+      $scope.selected = undefined;
+      $scope.searchData = 
+      [
+        
+          
+        
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Badge",
+              "breadcrumb": "Molecules - Badge > Badge",
+              "path": "molecules_-_badge.html#Badge"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "BG Colors",
+              "breadcrumb": "Atoms - Colours > BG Colors",
+              "path": "atoms_-_colours.html#BG Colors"
+              },
+            
+              
+              
+              {
+              "title": "Colour palette",
+              "breadcrumb": "Atoms - Colours > Colour palette",
+              "path": "atoms_-_colours.html#Colour palette"
+              },
+            
+              
+              
+              {
+              "title": "Kids BG Colors",
+              "breadcrumb": "Atoms - Colours > Kids BG Colors",
+              "path": "atoms_-_colours.html#Kids BG Colors"
+              },
+            
+              
+              
+              {
+              "title": "Story BG Colors",
+              "breadcrumb": "Atoms - Colours > Story BG Colors",
+              "path": "atoms_-_colours.html#Story BG Colors"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Buttons",
+              "breadcrumb": "Atoms - CTAs > Buttons",
+              "path": "atoms_-_ctas.html#buttons"
+              },
+            
+              
+              
+              {
+              "title": "Inline text links",
+              "breadcrumb": "Atoms - CTAs > Inline text links",
+              "path": "atoms_-_ctas.html#Inline text links"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Form elements",
+              "breadcrumb": "Atoms - Form elments > Form elements",
+              "path": "atoms_-_form_elments.html#Form elements"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Grid gutter",
+              "breadcrumb": "Atoms - Grid > Grid gutter",
+              "path": "atoms_-_grid.html#Grid gutter"
+              },
+            
+              
+              
+              {
+              "title": "Grid sizes",
+              "breadcrumb": "Atoms - Grid > Grid sizes",
+              "path": "atoms_-_grid.html#Grid sizes"
+              },
+            
+              
+              
+              {
+              "title": "Mixed grids",
+              "breadcrumb": "Atoms - Grid > Mixed grids",
+              "path": "atoms_-_grid.html#Mixed grids"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "HR",
+              "breadcrumb": "Atoms - Typography > HR",
+              "path": "atoms_-_typography.html#HR"
+              },
+            
+              
+              
+              {
+              "title": "Paragraph styles/Sizes",
+              "breadcrumb": "Atoms - Typography > Paragraph styles/Sizes",
+              "path": "atoms_-_typography.html#Paragraph styles/Sizes"
+              },
+            
+              
+              
+              {
+              "title": "Titles",
+              "breadcrumb": "Atoms - Typography > Titles",
+              "path": "atoms_-_typography.html#Titles"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Icon font",
+              "breadcrumb": "Atoms - Icons > Icon font",
+              "path": "atoms_-_icons.html#Icon font"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Lists",
+              "breadcrumb": "Atoms - Tables and lists > Lists",
+              "path": "atoms_-_tables_and_lists.html#Lists"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Pane Image",
+              "breadcrumb": "Organisims - Panes > Pane Image",
+              "path": "organisims_-_panes.html#Pane Image"
+              },
+            
+              
+              
+              {
+              "title": "Pane SVG",
+              "breadcrumb": "Organisims - Panes > Pane SVG",
+              "path": "organisims_-_panes.html#Pane SVG"
+              },
+            
+              
+              
+              {
+              "title": "Pane Text",
+              "breadcrumb": "Organisims - Panes > Pane Text",
+              "path": "organisims_-_panes.html#Pane Text"
+              },
+            
+              
+              
+              {
+              "title": "Pane Video",
+              "breadcrumb": "Organisims - Panes > Pane Video",
+              "path": "organisims_-_panes.html#Pane Video"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Rows",
+              "breadcrumb": "Organisims - Rows > Rows",
+              "path": "organisims_-_rows.html#Rows"
+              },
+            
+          
+        
+      {}];
+      $scope.onSelect = function ($item, $model, $label) {
+        window.location.replace($item.path);
+      };
+    }
+  </script>
+  <script type="text/ng-template" id="customTemplate.html">
+    <a href="{{match.model.path}}">
+      <p class="crlib-search-title">{{match.model.title}}</p>
+      <p class="crlib-search-path">{{match.model.breadcrumb}}</p>
+    </a>
+  </script>
+  
+  <!-- Source Components -->
+  
+</body>
+</html>

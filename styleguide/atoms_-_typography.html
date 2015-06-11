@@ -1,0 +1,879 @@
+
+<!DOCTYPE html>
+<html ng-app="crlib">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Atoms - Typography</title>
+
+    <!-- Styleguide CSS -->
+    <link rel="stylesheet" href="css/styleguide.css">
+
+    <!-- Source CSS -->
+    
+      
+        <link rel="stylesheet" href="../css/crlib.styles.css">
+      
+    
+
+    <!--[if lt IE 9]>
+      <script src="js/polyfill/html5shiv.js"></script>
+      <script src="js/polyfill/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+  <body class="crlib-body"  ng-controller="MainController">
+
+    <div class="sb-slidebar sb-left crlib-sidenav sb-style-push">
+
+      
+      
+        
+        
+          
+        
+      
+        
+        
+          
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+          
+        
+      
+        
+        
+      
+
+      <nav class="crlib-nav">
+        <ul>
+          
+            <li><a href="index.html">Home</a></li>
+          
+        </ul>
+        
+        <div class="crlib-cat">
+          <h3 class="crlib-cat--molecules">Molecules</h3>
+          <span class="crlib-inline crlib-inline--molecules">
+        </div>
+          <ul>
+          
+            
+              
+              
+                <li><a href="molecules_-_badge.html">Badge</a></li>
+              
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+          </ul>
+        
+        <div class="crlib-cat">
+          <h3 class="crlib-cat--atoms">Atoms</h3>
+          <span class="crlib-inline crlib-inline--atoms">
+        </div>
+          <ul>
+          
+            
+          
+            
+              
+              
+                <li><a href="atoms_-_colours.html">Colours</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="atoms_-_ctas.html">CTAs</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="atoms_-_form_elments.html">Form elments</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="atoms_-_grid.html">Grid</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a class="active" href="atoms_-_typography.html">Typography</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="atoms_-_icons.html">Icons</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="atoms_-_tables_and_lists.html">Tables and lists</a></li>
+              
+            
+          
+            
+          
+            
+          
+          </ul>
+        
+        <div class="crlib-cat">
+          <h3 class="crlib-cat--organisims">Organisims</h3>
+          <span class="crlib-inline crlib-inline--organisims">
+        </div>
+          <ul>
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+              
+                <li><a href="organisims_-_panes.html">Panes</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="organisims_-_rows.html">Rows</a></li>
+              
+            
+          
+          </ul>
+        
+      </nav>
+    </div>
+
+    <div class="crlib-header sb-slide">
+        <span class="crlib-logo">PATTERN LIBRARY</span>
+      <div id="open-left" class="crlib-menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="crlib-search-wrapper" ng-controller="TypeaheadCtrl">
+        <input id="crlib-search" type="text" class="form-control crlib-search" ng-model="customSelected" placeholder="Search" typeahead="data as data.title for data in searchData | filter:{title:$viewValue}" typeahead-template-url="customTemplate.html" class="form-control" typeahead-on-select="onSelect($item, $model, $label)">
+      </div>
+    </div>
+
+    <div id="sb-site">
+
+      <div class="crlib-container">
+
+        <nav id="crlib-inside-nav" class="crlib-inside-nav" bs-affix>
+          <h2 class="">Typography</h2>
+          <ul bs-scrollspy-list data-offset="-30">
+            
+              
+                <li><a href="#HR">HR</a></li>
+              
+            
+              
+                <li><a href="#Paragraph styles/Sizes">Paragraph styles/Sizes</a></li>
+              
+            
+              
+                <li><a href="#Titles">Titles</a></li>
+              
+            
+          </ul>
+        </nav>
+
+        <div class="crlib-content-wrapper clearfix">
+          <div class="crlib-content">
+            <div class="crlib-inline crlib-inline--red">123</div>
+            <div class="crlib-inline crlib-inline--blue">123</div>
+            <div class="crlib-inline crlib-inline--yellow">123</div><h1 id="HR">HR</h1>
+
+<p>If you need a simple coloured line, you can render a <code>&lt;hr&gt;</code> tag with one of the <code>.hr--{colour}</code>
+classes, as shown below.</p>
+
+<p>Note: the <code>&lt;hr&gt;</code> doesn&#39;t get any margin or padding so you&#39;ll need to supply this in your
+own component, should you need to.</p>
+
+<table><thead>
+<tr>
+<th>Classes to use</th>
+<th>Example of use in HTML</th>
+<th>Example</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>.hr--pink</td>
+<td><code>&lt;hr class=&quot;hr--pink&quot;&gt;</code></td>
+<td><hr class="hr--pink"></td>
+</tr>
+<tr>
+<td>.hr--pink-dark</td>
+<td><code>&lt;hr class=&quot;hr--pink-dark&quot;&gt;</code></td>
+<td><hr class="hr--pink-dark"></td>
+</tr>
+<tr>
+<td>.hr--pink-v-dark</td>
+<td><code>&lt;hr class=&quot;hr--pink-v-dark&quot;&gt;</code></td>
+<td><hr class="hr--pink-v-dark"></td>
+</tr>
+<tr>
+<td>.hr--orange</td>
+<td><code>&lt;hr class=&quot;hr--orange&quot;&gt;</code></td>
+<td><hr class="hr--orange"></td>
+</tr>
+<tr>
+<td>.hr--orange-dark</td>
+<td><code>&lt;hr class=&quot;hr--orange-dark&quot;&gt;</code></td>
+<td><hr class="hr--orange-dark"></td>
+</tr>
+<tr>
+<td>.hr--orange-v-dark</td>
+<td><code>&lt;hr class=&quot;hr--orange-v-dark&quot;&gt;</code></td>
+<td><hr class="hr--orange-v-dark"></td>
+</tr>
+<tr>
+<td>.hr--red</td>
+<td><code>&lt;hr class=&quot;hr--red&quot;&gt;</code></td>
+<td><hr class="hr--red"></td>
+</tr>
+<tr>
+<td>.hr--red-dark</td>
+<td><code>&lt;hr class=&quot;hr--red-dark&quot;&gt;</code></td>
+<td><hr class="hr--red-dark"></td>
+</tr>
+<tr>
+<td>.hr--red-v-dark</td>
+<td><code>&lt;hr class=&quot;hr--red-v-dark&quot;&gt;</code></td>
+<td><hr class="hr--red-v-dark"></td>
+</tr>
+<tr>
+<td>.hr--purple</td>
+<td><code>&lt;hr class=&quot;hr--purple&quot;&gt;</code></td>
+<td><hr class="hr--purple"></td>
+</tr>
+<tr>
+<td>.hr--purple-dark</td>
+<td><code>&lt;hr class=&quot;hr--purple-dark&quot;&gt;</code></td>
+<td><hr class="hr--purple-dark"></td>
+</tr>
+<tr>
+<td>.hr--purple-v-dark</td>
+<td><code>&lt;hr class=&quot;hr--purple-v-dark&quot;&gt;</code></td>
+<td><hr class="hr--purple-v-dark"></td>
+</tr>
+<tr>
+<td>.hr--blue</td>
+<td><code>&lt;hr class=&quot;hr--blue&quot;&gt;</code></td>
+<td><hr class="hr--blue"></td>
+</tr>
+<tr>
+<td>.hr--blue-dark</td>
+<td><code>&lt;hr class=&quot;hr--blue-dark&quot;&gt;</code></td>
+<td><hr class="hr--blue-dark"></td>
+</tr>
+<tr>
+<td>.hr--blue-v-dark</td>
+<td><code>&lt;hr class=&quot;hr--blue-v-dark&quot;&gt;</code></td>
+<td><hr class="hr--blue-v-dark"></td>
+</tr>
+<tr>
+<td>.hr--aqua</td>
+<td><code>&lt;hr class=&quot;hr--aqua&quot;&gt;</code></td>
+<td><hr class="hr--aqua"></td>
+</tr>
+<tr>
+<td>.hr--aqua-dark</td>
+<td><code>&lt;hr class=&quot;hr--aqua-dark&quot;&gt;</code></td>
+<td><hr class="hr--aqua-dark"></td>
+</tr>
+<tr>
+<td>.hr--aqua-v-dark</td>
+<td><code>&lt;hr class=&quot;hr--aqua-v-dark&quot;&gt;</code></td>
+<td><hr class="hr--aqua-v-dark"></td>
+</tr>
+<tr>
+<td>.hr--green</td>
+<td><code>&lt;hr class=&quot;hr--green&quot;&gt;</code></td>
+<td><hr class="hr--green"></td>
+</tr>
+<tr>
+<td>.hr--green-dark</td>
+<td><code>&lt;hr class=&quot;hr--green-dark&quot;&gt;</code></td>
+<td><hr class="hr--green-dark"></td>
+</tr>
+<tr>
+<td>.hr--green-v-dark</td>
+<td><code>&lt;hr class=&quot;hr--green-v-dark&quot;&gt;</code></td>
+<td><hr class="hr--green-v-dark"></td>
+</tr>
+<tr>
+<td>.hr--yellow</td>
+<td><code>&lt;hr class=&quot;hr--yellow&quot;&gt;</code></td>
+<td><hr class="hr--yellow"></td>
+</tr>
+<tr>
+<td>.hr--yellow-dark</td>
+<td><code>&lt;hr class=&quot;hr--yellow-dark&quot;&gt;</code></td>
+<td><hr class="hr--yellow-dark"></td>
+</tr>
+<tr>
+<td>.hr--yellow-v-dark</td>
+<td><code>&lt;hr class=&quot;hr--yellow-v-dark&quot;&gt;</code></td>
+<td><hr class="hr--yellow-v-dark"></td>
+</tr>
+<tr>
+<td>.hr--white</td>
+<td><code>&lt;hr class=&quot;hr--white&quot;&gt;</code></td>
+<td><hr class="hr--white"></td>
+</tr>
+<tr>
+<td>.hr--grey-v-light</td>
+<td><code>&lt;hr class=&quot;hr--grey-v-light&quot;&gt;</code></td>
+<td><hr class="hr--grey-v-light"></td>
+</tr>
+<tr>
+<td>.hr--grey-light</td>
+<td><code>&lt;hr class=&quot;hr--grey-light&quot;&gt;</code></td>
+<td><hr class="hr--grey-light"></td>
+</tr>
+<tr>
+<td>.hr--grey</td>
+<td><code>&lt;hr class=&quot;hr--grey&quot;&gt;</code></td>
+<td><hr class="hr--grey"></td>
+</tr>
+<tr>
+<td>.hr--grey-dark</td>
+<td><code>&lt;hr class=&quot;hr--grey-dark&quot;&gt;</code></td>
+<td><hr class="hr--grey-dark"></td>
+</tr>
+<tr>
+<td>.hr--grey-v-dark</td>
+<td><code>&lt;hr class=&quot;hr--grey-v-dark&quot;&gt;</code></td>
+<td><hr class="hr--grey-v-dark"></td>
+</tr>
+<tr>
+<td>.hr--black</td>
+<td><code>&lt;hr class=&quot;hr--black&quot;&gt;</code></td>
+<td><hr class="hr--black"></td>
+</tr>
+</tbody></table>
+
+<h1 id="Paragraph styles/Sizes">Paragraph styles/Sizes</h1>
+
+<table><thead>
+<tr>
+<th>Type</th>
+<th>Modifier Class</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><p class="type--white" style="background:black;">White paragraph</p></td>
+<td>&#39;type--white&#39;</td>
+</tr>
+<tr>
+<td><p class="type--pink">Pink paragraph</p></td>
+<td>&#39;type--pink&#39;</td>
+</tr>
+<tr>
+<td><p class="type--orange">Orange paragraph</p></td>
+<td>&#39;type--orange&#39;</td>
+</tr>
+<tr>
+<td><p class="type--red">Red paragraph</p></td>
+<td>&#39;type--red&#39;</td>
+</tr>
+<tr>
+<td><p class="type--purple">Purple paragraph</p></td>
+<td>&#39;type--purple&#39;</td>
+</tr>
+<tr>
+<td><p class="type--blue">Blue paragraph</p></td>
+<td>&#39;type--blue&#39;</td>
+</tr>
+<tr>
+<td><p class="type--aqua">Aqua paragraph</p></td>
+<td>&#39;type--aqua&#39;</td>
+</tr>
+<tr>
+<td><p class="type--green">Green paragraph</p></td>
+<td>&#39;type--green&#39;</td>
+</tr>
+<tr>
+<td><p class="type--yellow">Yellow paragraph</p></td>
+<td>&#39;type--yellow&#39;</td>
+</tr>
+<tr>
+<td><p class="type--grey">Grey paragraph</p></td>
+<td>&#39;type--grey&#39;</td>
+</tr>
+<tr>
+<td><p class="type--black">Black paragraph</p></td>
+<td>&#39;type--black&#39;</td>
+</tr>
+<tr>
+<td><p class="type--xl">XLarge paragraph</p></td>
+<td>&#39;p.type--xl&#39;</td>
+</tr>
+<tr>
+<td><span class="type--xl">XLarge span</span></td>
+<td>&#39;span.type--xl&#39;</td>
+</tr>
+<tr>
+<td><p class="type--lg">Large paragraph</p></td>
+<td>&#39;p.type--lg&#39;</td>
+</tr>
+<tr>
+<td><span class="type--lg">Large span</span></td>
+<td>&#39;span.type--lg&#39;</td>
+</tr>
+<tr>
+<td><p>Body paragrapgh</p></td>
+<td>&#39;p&#39;</td>
+</tr>
+<tr>
+<td><span>Body span</span></td>
+<td>&#39;span&#39;</td>
+</tr>
+<tr>
+<td><p class="type--sm">small paragraph</p></td>
+<td>&#39;p.type--sm&#39;</td>
+</tr>
+<tr>
+<td><span class="type--sm">small span</span></td>
+<td>&#39;span.type--sm&#39;</td>
+</tr>
+<tr>
+<td><p class="type--xl">Special Circumstances below</p></td>
+<td>&#39;&#39;</td>
+</tr>
+<tr>
+<td><p class="type--light">Light Type</p></td>
+<td>&#39;.type--light&#39;</td>
+</tr>
+<tr>
+<td><p class="type--semibold">Semibold Type</p></td>
+<td>&#39;.type--semibold&#39;</td>
+</tr>
+<tr>
+<td><p class="type--upper">Uppercase</p></td>
+<td>&#39;.type--upper&#39;</td>
+</tr>
+<tr>
+<td><p class="type--non-upper">Not Uppsercase</p></td>
+<td>&#39;.type--non-upper&#39;</td>
+</tr>
+<tr>
+<td><p class="type--italic">Italic Type</p></td>
+<td>&#39;.type--italic&#39;</td>
+</tr>
+<tr>
+<td><p class="type--left">Left Aligned</p></td>
+<td>&#39;.type--left&#39;</td>
+</tr>
+<tr>
+<td><p class="type--centred">Center Aligned</p></td>
+<td>&#39;.type--centred&#39;</td>
+</tr>
+<tr>
+<td><p class="type--right">Right Aligned</p></td>
+<td>&#39;.type--right&#39;</td>
+</tr>
+<tr>
+<td><p class="type--left--xs">Left Aligned XS Breakpoint</p></td>
+<td>&#39;.type--left--xs&#39;</td>
+</tr>
+<tr>
+<td><p class="type--centred--sm">Center Aligned SM Breakpoint</p></td>
+<td>&#39;.type--centred--sm&#39;</td>
+</tr>
+<tr>
+<td><p class="type--right--md">Right Aligned MD Breakpoint</p></td>
+<td>&#39;.type--right--md&#39;</td>
+</tr>
+<tr>
+<td><p class="type--centred--lg">Center Aligned LG Breakpoint</p></td>
+<td>&#39;.type--centred--lg&#39;</td>
+</tr>
+</tbody></table>
+
+<h1 id="Titles">Titles</h1>
+
+<h2>Sizes</h2>
+
+<p>There are 10 different type sizes, each with their own variants. Apply the class in the modifier to the size and style you would like. If the modifier simply say e.g h4 then no class is needed.</p>
+
+<p>There are a list of classes related to brand colours, use .type--white, .type--red for example.</p>
+
+<h2>Special Circumstances</h2>
+
+<p>These have been displayed below on p tags but they can be attached to any tag, p tags are just used for demonstration. You should find everything you need here, if not, let me know.</p>
+
+<h2>Text Aligning</h2>
+
+<p>There are classes below to show text being aligned, there are also breakpoint specific classes such as; .type--left--sm, .type--right--sm, .type--centred--sm. Note, these classes do not inherit upwards in a mobile first fashion, they work between breakpoints. The example will work for the SM breakpoint only.</p>
+
+<table><thead>
+<tr>
+<th>Type</th>
+<th>Modifier Class</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><h1 class="type--xl">Heading 1 Xlarge</h1></td>
+<td>&#39;h1.type--xl&#39;</td>
+</tr>
+<tr>
+<td><h1 class="type--lg">Heading 1 Large</h1></td>
+<td>&#39;h1.type--lg&#39;</td>
+</tr>
+<tr>
+<td><h1 class="type--def">Heading 1</h1></td>
+<td>&#39;h1.type--def&#39;</td>
+</tr>
+<tr>
+<td><h2>Heading 2</h2></td>
+<td>&#39;h2&#39;</td>
+</tr>
+<tr>
+<td><h3>Heading 3</h3></td>
+<td>&#39;h3&#39;</td>
+</tr>
+<tr>
+<td><h4>Heading 4</h4></td>
+<td>&#39;h4&#39;</td>
+</tr>
+</tbody></table>
+</div><div class="codeExample"><div class="exampleOutput"><h1>h1 36px</h1>
+
+<h2>h2 25px</h2>
+
+<h3>h3 20px</h3>
+
+<h4>h4 18px</h4>
+
+<h5>h5 16px</h5>
+
+<p>This is an example of our base font style 16px. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;h1&gt;</span>h1 36px<span class="nt">&lt;/h1&gt;</span>
+
+<span class="nt">&lt;h2&gt;</span>h2 25px<span class="nt">&lt;/h2&gt;</span>
+
+<span class="nt">&lt;h3&gt;</span>h3 20px<span class="nt">&lt;/h3&gt;</span>
+
+<span class="nt">&lt;h4&gt;</span>h4 18px<span class="nt">&lt;/h4&gt;</span>
+
+<span class="nt">&lt;h5&gt;</span>h5 16px<span class="nt">&lt;/h5&gt;</span>
+
+<span class="nt">&lt;p&gt;</span>This is an example of our base font style 16px. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<span class="nt">&lt;/p&gt;</span>
+</pre></div></div></div><div class="cortana-content">
+        </div>
+      </div>
+    </div>
+
+    <footer class="crlib-footer">
+     
+    </footer>  
+  </div>
+
+  <script src="js/vendors.min.js"></script>
+  <script type="text/javascript">
+    var jQuery_no_conflict = $.noConflict(true);
+  </script>
+  <script src="js/main.js"></script>
+  <script type="text/javascript">
+    function TypeaheadCtrl($scope) {
+      $scope.selected = undefined;
+      $scope.searchData = 
+      [
+        
+          
+        
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Badge",
+              "breadcrumb": "Molecules - Badge > Badge",
+              "path": "molecules_-_badge.html#Badge"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "BG Colors",
+              "breadcrumb": "Atoms - Colours > BG Colors",
+              "path": "atoms_-_colours.html#BG Colors"
+              },
+            
+              
+              
+              {
+              "title": "Colour palette",
+              "breadcrumb": "Atoms - Colours > Colour palette",
+              "path": "atoms_-_colours.html#Colour palette"
+              },
+            
+              
+              
+              {
+              "title": "Kids BG Colors",
+              "breadcrumb": "Atoms - Colours > Kids BG Colors",
+              "path": "atoms_-_colours.html#Kids BG Colors"
+              },
+            
+              
+              
+              {
+              "title": "Story BG Colors",
+              "breadcrumb": "Atoms - Colours > Story BG Colors",
+              "path": "atoms_-_colours.html#Story BG Colors"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Buttons",
+              "breadcrumb": "Atoms - CTAs > Buttons",
+              "path": "atoms_-_ctas.html#buttons"
+              },
+            
+              
+              
+              {
+              "title": "Inline text links",
+              "breadcrumb": "Atoms - CTAs > Inline text links",
+              "path": "atoms_-_ctas.html#Inline text links"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Form elements",
+              "breadcrumb": "Atoms - Form elments > Form elements",
+              "path": "atoms_-_form_elments.html#Form elements"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Grid gutter",
+              "breadcrumb": "Atoms - Grid > Grid gutter",
+              "path": "atoms_-_grid.html#Grid gutter"
+              },
+            
+              
+              
+              {
+              "title": "Grid sizes",
+              "breadcrumb": "Atoms - Grid > Grid sizes",
+              "path": "atoms_-_grid.html#Grid sizes"
+              },
+            
+              
+              
+              {
+              "title": "Mixed grids",
+              "breadcrumb": "Atoms - Grid > Mixed grids",
+              "path": "atoms_-_grid.html#Mixed grids"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "HR",
+              "breadcrumb": "Atoms - Typography > HR",
+              "path": "atoms_-_typography.html#HR"
+              },
+            
+              
+              
+              {
+              "title": "Paragraph styles/Sizes",
+              "breadcrumb": "Atoms - Typography > Paragraph styles/Sizes",
+              "path": "atoms_-_typography.html#Paragraph styles/Sizes"
+              },
+            
+              
+              
+              {
+              "title": "Titles",
+              "breadcrumb": "Atoms - Typography > Titles",
+              "path": "atoms_-_typography.html#Titles"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Icon font",
+              "breadcrumb": "Atoms - Icons > Icon font",
+              "path": "atoms_-_icons.html#Icon font"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Lists",
+              "breadcrumb": "Atoms - Tables and lists > Lists",
+              "path": "atoms_-_tables_and_lists.html#Lists"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Pane Image",
+              "breadcrumb": "Organisims - Panes > Pane Image",
+              "path": "organisims_-_panes.html#Pane Image"
+              },
+            
+              
+              
+              {
+              "title": "Pane SVG",
+              "breadcrumb": "Organisims - Panes > Pane SVG",
+              "path": "organisims_-_panes.html#Pane SVG"
+              },
+            
+              
+              
+              {
+              "title": "Pane Text",
+              "breadcrumb": "Organisims - Panes > Pane Text",
+              "path": "organisims_-_panes.html#Pane Text"
+              },
+            
+              
+              
+              {
+              "title": "Pane Video",
+              "breadcrumb": "Organisims - Panes > Pane Video",
+              "path": "organisims_-_panes.html#Pane Video"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Rows",
+              "breadcrumb": "Organisims - Rows > Rows",
+              "path": "organisims_-_rows.html#Rows"
+              },
+            
+          
+        
+      {}];
+      $scope.onSelect = function ($item, $model, $label) {
+        window.location.replace($item.path);
+      };
+    }
+  </script>
+  <script type="text/ng-template" id="customTemplate.html">
+    <a href="{{match.model.path}}">
+      <p class="crlib-search-title">{{match.model.title}}</p>
+      <p class="crlib-search-path">{{match.model.breadcrumb}}</p>
+    </a>
+  </script>
+  
+  <!-- Source Components -->
+  
+</body>
+</html>

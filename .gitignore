@@ -1,0 +1,11 @@
+# Ignore linux temporary files
+*~
+
+
+#Ignore macs annoying habits
+
+.DS_Store
+.DS_Store?
+.Spotlight-V100
+.sass-cache
+

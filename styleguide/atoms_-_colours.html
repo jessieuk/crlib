@@ -1,0 +1,900 @@
+
+<!DOCTYPE html>
+<html ng-app="crlib">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Atoms - Colours</title>
+
+    <!-- Styleguide CSS -->
+    <link rel="stylesheet" href="css/styleguide.css">
+
+    <!-- Source CSS -->
+    
+      
+        <link rel="stylesheet" href="../css/crlib.styles.css">
+      
+    
+
+    <!--[if lt IE 9]>
+      <script src="js/polyfill/html5shiv.js"></script>
+      <script src="js/polyfill/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+  <body class="crlib-body"  ng-controller="MainController">
+
+    <div class="sb-slidebar sb-left crlib-sidenav sb-style-push">
+
+      
+      
+        
+        
+          
+        
+      
+        
+        
+          
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+          
+        
+      
+        
+        
+      
+
+      <nav class="crlib-nav">
+        <ul>
+          
+            <li><a href="index.html">Home</a></li>
+          
+        </ul>
+        
+        <div class="crlib-cat">
+          <h3 class="crlib-cat--molecules">Molecules</h3>
+          <span class="crlib-inline crlib-inline--molecules">
+        </div>
+          <ul>
+          
+            
+              
+              
+                <li><a href="molecules_-_badge.html">Badge</a></li>
+              
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+          </ul>
+        
+        <div class="crlib-cat">
+          <h3 class="crlib-cat--atoms">Atoms</h3>
+          <span class="crlib-inline crlib-inline--atoms">
+        </div>
+          <ul>
+          
+            
+          
+            
+              
+              
+                <li><a class="active" href="atoms_-_colours.html">Colours</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="atoms_-_ctas.html">CTAs</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="atoms_-_form_elments.html">Form elments</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="atoms_-_grid.html">Grid</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="atoms_-_typography.html">Typography</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="atoms_-_icons.html">Icons</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="atoms_-_tables_and_lists.html">Tables and lists</a></li>
+              
+            
+          
+            
+          
+            
+          
+          </ul>
+        
+        <div class="crlib-cat">
+          <h3 class="crlib-cat--organisims">Organisims</h3>
+          <span class="crlib-inline crlib-inline--organisims">
+        </div>
+          <ul>
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+              
+                <li><a href="organisims_-_panes.html">Panes</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="organisims_-_rows.html">Rows</a></li>
+              
+            
+          
+          </ul>
+        
+      </nav>
+    </div>
+
+    <div class="crlib-header sb-slide">
+        <span class="crlib-logo">PATTERN LIBRARY</span>
+      <div id="open-left" class="crlib-menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="crlib-search-wrapper" ng-controller="TypeaheadCtrl">
+        <input id="crlib-search" type="text" class="form-control crlib-search" ng-model="customSelected" placeholder="Search" typeahead="data as data.title for data in searchData | filter:{title:$viewValue}" typeahead-template-url="customTemplate.html" class="form-control" typeahead-on-select="onSelect($item, $model, $label)">
+      </div>
+    </div>
+
+    <div id="sb-site">
+
+      <div class="crlib-container">
+
+        <nav id="crlib-inside-nav" class="crlib-inside-nav" bs-affix>
+          <h2 class="">Colours</h2>
+          <ul bs-scrollspy-list data-offset="-30">
+            
+              
+                <li><a href="#BG Colors">BG Colors</a></li>
+              
+            
+              
+                <li><a href="#Colour palette">Colour palette</a></li>
+              
+            
+              
+                <li><a href="#Kids BG Colors">Kids BG Colors</a></li>
+              
+            
+              
+                <li><a href="#Story BG Colors">Story BG Colors</a></li>
+              
+            
+          </ul>
+        </nav>
+
+        <div class="crlib-content-wrapper clearfix">
+          <div class="crlib-content">
+            <div class="crlib-inline crlib-inline--red">123</div>
+            <div class="crlib-inline crlib-inline--blue">123</div>
+            <div class="crlib-inline crlib-inline--yellow">123</div><h1 id="BG Colors">BG Colors</h1>
+
+<p>The bg-color component allows you to add a background color to any element on the site via a class.</p>
+
+<p>See the examples below.</p>
+
+<h3>BG Color Classes</h3>
+
+<table><thead>
+<tr>
+<th>Classes to use</th>
+<th>Example of use</th>
+<th>HTML</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><br>.bg-color--pink</td>
+<td><div class="bg-color--pink">Content/images</div></td>
+<td><code>&lt;div class=&quot;bg-color--pink&quot;&gt;</code><br><code>Content/images</code><br><code>&lt;/div&gt;</code></td>
+</tr>
+<tr>
+<td><br>.bg-color--pink-dark</td>
+<td><div class="bg-color--pink-dark">Content/images</div></td>
+<td><code>&lt;div class=&quot;bg-color--pink-dark&quot;&gt;</code><br><code>Content/images</code><br><code>&lt;/div&gt;</code></td>
+</tr>
+<tr>
+<td><br>.bg-color--pink-v-dark</td>
+<td><div class="bg-color--pink-v-dark">Content/images</div></td>
+<td><code>&lt;div class=&quot;bg-color--pink-v-dark&quot;&gt;</code><br><code>Content/images</code><br><code>&lt;/div&gt;</code></td>
+</tr>
+<tr>
+<td><br>.bg-color--orange</td>
+<td><div class="bg-color--orange">Content/images</div></td>
+<td><code>&lt;div class=&quot;bg-color--orange&quot;&gt;</code><br><code>Content/images</code><br><code>&lt;/div&gt;</code></td>
+</tr>
+<tr>
+<td><br>.bg-color--orange-dark</td>
+<td><div class="bg-color--orange-dark">Content/images</div></td>
+<td><code>&lt;div class=&quot;bg-color--orange-dark&quot;&gt;</code><br><code>Content/images</code><br><code>&lt;/div&gt;</code></td>
+</tr>
+<tr>
+<td><br>.bg-color--orange-v-dark</td>
+<td><div class="bg-color--orange-v-dark">Content/images</div></td>
+<td><code>&lt;div class=&quot;bg-color--orange-v-dark&quot;&gt;</code><br><code>Content/images</code><br><code>&lt;/div&gt;</code></td>
+</tr>
+<tr>
+<td><br>.bg-color--red</td>
+<td><div class="bg-color--red">Content/images</div></td>
+<td><code>&lt;div class=&quot;bg-color--red&quot;&gt;</code><br><code>Content/images</code><br><code>&lt;/div&gt;</code></td>
+</tr>
+<tr>
+<td><br>.bg-color--red-dark</td>
+<td><div class="bg-color--red-dark">Content/images</div></td>
+<td><code>&lt;div class=&quot;bg-color--red-dark&quot;&gt;</code><br><code>Content/images</code><br><code>&lt;/div&gt;</code></td>
+</tr>
+<tr>
+<td><br>.bg-color--red-v-dark</td>
+<td><div class="bg-color--red-v-dark">Content/images</div></td>
+<td><code>&lt;div class=&quot;bg-color--red-v-dark&quot;&gt;</code><br><code>Content/images</code><br><code>&lt;/div&gt;</code></td>
+</tr>
+<tr>
+<td><br>.bg-color--purple</td>
+<td><div class="bg-color--purple">Content/images</div></td>
+<td><code>&lt;div class=&quot;bg-color--purple&quot;&gt;</code><br><code>Content/images</code><br><code>&lt;/div&gt;</code></td>
+</tr>
+<tr>
+<td><br>.bg-color--purple-dark</td>
+<td><div class="bg-color--purple-dark">Content/images</div></td>
+<td><code>&lt;div class=&quot;bg-color--purple-dark&quot;&gt;</code><br><code>Content/images</code><br><code>&lt;/div&gt;</code></td>
+</tr>
+<tr>
+<td><br>.bg-color--purple-v-dark</td>
+<td><div class="bg-color--purple-v-dark">Content/images</div></td>
+<td><code>&lt;div class=&quot;bg-color--purple-v-dark&quot;&gt;</code><br><code>Content/images</code><br><code>&lt;/div&gt;</code></td>
+</tr>
+<tr>
+<td><br>.bg-color--blue</td>
+<td><div class="bg-color--blue">Content/images</div></td>
+<td><code>&lt;div class=&quot;bg-color--blue&quot;&gt;</code><br><code>Content/images</code><br><code>&lt;/div&gt;</code></td>
+</tr>
+<tr>
+<td><br>.bg-color--blue-dark</td>
+<td><div class="bg-color--blue-dark">Content/images</div></td>
+<td><code>&lt;div class=&quot;bg-color--blue-dark&quot;&gt;</code><br><code>Content/images</code><br><code>&lt;/div&gt;</code></td>
+</tr>
+<tr>
+<td><br>.bg-color--blue-v-dark</td>
+<td><div class="bg-color--blue-v-dark">Content/images</div></td>
+<td><code>&lt;div class=&quot;bg-color--blue-v-dark&quot;&gt;</code><br><code>Content/images</code><br><code>&lt;/div&gt;</code></td>
+</tr>
+<tr>
+<td><br>.bg-color--aqua</td>
+<td><div class="bg-color--aqua">Content/images</div></td>
+<td><code>&lt;div class=&quot;bg-color--aqua&quot;&gt;</code><br><code>Content/images</code><br><code>&lt;/div&gt;</code></td>
+</tr>
+<tr>
+<td><br>.bg-color--aqua-dark</td>
+<td><div class="bg-color--aqua-dark">Content/images</div></td>
+<td><code>&lt;div class=&quot;bg-color--aqua-dark&quot;&gt;</code><br><code>Content/images</code><br><code>&lt;/div&gt;</code></td>
+</tr>
+<tr>
+<td><br>.bg-color--aqua-v-dark</td>
+<td><div class="bg-color--aqua-v-dark">Content/images</div></td>
+<td><code>&lt;div class=&quot;bg-color--aqua-v-dark&quot;&gt;</code><br><code>Content/images</code><br><code>&lt;/div&gt;</code></td>
+</tr>
+<tr>
+<td><br>.bg-color--green</td>
+<td><div class="bg-color--green">Content/images</div></td>
+<td><code>&lt;div class=&quot;bg-color--green&quot;&gt;</code><br><code>Content/images</code><br><code>&lt;/div&gt;</code></td>
+</tr>
+<tr>
+<td><br>.bg-color--green-dark</td>
+<td><div class="bg-color--green-dark">Content/images</div></td>
+<td><code>&lt;div class=&quot;bg-color--green-dark&quot;&gt;</code><br><code>Content/images</code><br><code>&lt;/div&gt;</code></td>
+</tr>
+<tr>
+<td><br>.bg-color--green-v-dark</td>
+<td><div class="bg-color--green-v-dark">Content/images</div></td>
+<td><code>&lt;div class=&quot;bg-color--green-v-dark&quot;&gt;</code><br><code>Content/images</code><br><code>&lt;/div&gt;</code></td>
+</tr>
+<tr>
+<td><br>.bg-color--yellow</td>
+<td><div class="bg-color--yellow">Content/images</div></td>
+<td><code>&lt;div class=&quot;bg-color--yellow&quot;&gt;</code><br><code>Content/images</code><br><code>&lt;/div&gt;</code></td>
+</tr>
+<tr>
+<td><br>.bg-color--yellow-dark</td>
+<td><div class="bg-color--yellow-dark">Content/images</div></td>
+<td><code>&lt;div class=&quot;bg-color--yellow-dark&quot;&gt;</code><br><code>Content/images</code><br><code>&lt;/div&gt;</code></td>
+</tr>
+<tr>
+<td><br>.bg-color--yellow-v-dark</td>
+<td><div class="bg-color--yellow-v-dark">Content/images</div></td>
+<td><code>&lt;div class=&quot;bg-color--yellow-v-dark&quot;&gt;</code><br><code>Content/images</code><br><code>&lt;/div&gt;</code></td>
+</tr>
+<tr>
+<td><br>.bg-color--white</td>
+<td><div class="bg-color--white">Content/images</div></td>
+<td><code>&lt;div class=&quot;bg-color--white&quot;&gt;</code><br><code>Content/images</code><br><code>&lt;/div&gt;</code></td>
+</tr>
+<tr>
+<td><br>.bg-color--grey-v-light</td>
+<td><div class="bg-color--grey-v-light">Content/images</div></td>
+<td><code>&lt;div class=&quot;bg-color--grey-v-light&quot;&gt;</code><br><code>Content/images</code><br><code>&lt;/div&gt;</code></td>
+</tr>
+<tr>
+<td><br>.bg-color--grey-light</td>
+<td><div class="bg-color--grey-light">Content/images</div></td>
+<td><code>&lt;div class=&quot;bg-color--grey-light&quot;&gt;</code><br><code>Content/images</code><br><code>&lt;/div&gt;</code></td>
+</tr>
+<tr>
+<td><br>.bg-color--grey</td>
+<td><div class="bg-color--grey">Content/images</div></td>
+<td><code>&lt;div class=&quot;bg-color--grey&quot;&gt;</code><br><code>Content/images</code><br><code>&lt;/div&gt;</code></td>
+</tr>
+<tr>
+<td><br>.bg-color--grey-dark</td>
+<td><div class="bg-color--grey-dark">Content/images</div></td>
+<td><code>&lt;div class=&quot;bg-color--grey-dark&quot;&gt;</code><br><code>Content/images</code><br><code>&lt;/div&gt;</code></td>
+</tr>
+<tr>
+<td><br>.bg-color--grey-v-dark</td>
+<td><div class="bg-color--grey-v-dark">Content/images</div></td>
+<td><code>&lt;div class=&quot;bg-color--grey-v-dark&quot;&gt;</code><br><code>Content/images</code><br><code>&lt;/div&gt;</code></td>
+</tr>
+<tr>
+<td><br>.bg-color--black</td>
+<td><div class="bg-color--black">Content/images</div></td>
+<td><code>&lt;div class=&quot;bg-color--black&quot;&gt;</code><br><code>Content/images</code><br><code>&lt;/div&gt;</code></td>
+</tr>
+</tbody></table>
+
+<h1 id="Colour palette">Colour palette</h1>
+
+<table><thead>
+<tr>
+<th>Type</th>
+<th>Variables</th>
+<th>Colour Code</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><div style="width:60px; height:60px; background-color:#FF9cB2;position:relative;"></div></td>
+<td>$pink-brand</td>
+<td>#FF9cB2</td>
+</tr>
+<tr>
+<td><div style="width:60px; height:60px; background-color:#D57893;position:relative;"></div></td>
+<td>$pink-dark</td>
+<td>#D57893</td>
+</tr>
+<tr>
+<td><div style="width:60px; height:60px; background-color:#A14660;position:relative;"></div></td>
+<td>$pink-v-dark</td>
+<td>#A14660</td>
+</tr>
+<tr>
+<td><div style="width:60px; height:60px; background-color:#FF6A58;position:relative;"></div></td>
+<td>$orange-brand</td>
+<td>#FF6A58</td>
+</tr>
+<tr>
+<td><div style="width:60px; height:60px; background-color:#F76654;position:relative;"></div></td>
+<td>$orange-dark</td>
+<td>#F76654</td>
+</tr>
+<tr>
+<td><div style="width:60px; height:60px; background-color:#D32713;position:relative;"></div></td>
+<td>$orange-v-dark</td>
+<td>#D32713</td>
+</tr>
+<tr>
+<td><div style="width:60px; height:60px; background-color:#F32836;position:relative;"></div></td>
+<td>$red-brand</td>
+<td>#F32836</td>
+</tr>
+<tr>
+<td><div style="width:60px; height:60px; background-color:#F32836;position:relative;"></div></td>
+<td>$red-dark</td>
+<td>#F32836</td>
+</tr>
+<tr>
+<td><div style="width:60px; height:60px; background-color:#B9010E;position:relative;"></div></td>
+<td>$red-v-dark</td>
+<td>#B9010E</td>
+</tr>
+<tr>
+<td><div style="width:60px; height:60px; background-color:#A465B1;position:relative;"></div></td>
+<td>$purple-brand</td>
+<td>#A465B1</td>
+</tr>
+<tr>
+<td><div style="width:60px; height:60px; background-color:#A465B1;position:relative;"></div></td>
+<td>$purple-dark</td>
+<td>#A465B1</td>
+</tr>
+<tr>
+<td><div style="width:60px; height:60px; background-color:#7C4A81;position:relative;"></div></td>
+<td>$purple-v-dark</td>
+<td>#7C4A81</td>
+</tr>
+<tr>
+<td><div style="width:60px; height:60px; background-color:#00B3E7;position:relative;"></div></td>
+<td>$blue-brand</td>
+<td>#00B3E7</td>
+</tr>
+<tr>
+<td><div style="width:60px; height:60px; background-color:#009AE8;position:relative;"></div></td>
+<td>$blue-dark</td>
+<td>#009AE8</td>
+</tr>
+<tr>
+<td><div style="width:60px; height:60px; background-color:#026897;position:relative;"></div></td>
+<td>$blue-v-dark</td>
+<td>#026897</td>
+</tr>
+<tr>
+<td><div style="width:60px; height:60px; background-color:#57D9D5;position:relative;"></div></td>
+<td>$aqua-brand</td>
+<td>#57D9D5</td>
+</tr>
+<tr>
+<td><div style="width:60px; height:60px; background-color:#00B7B0;position:relative;"></div></td>
+<td>$aqua-dark</td>
+<td>#00B7B0</td>
+</tr>
+<tr>
+<td><div style="width:60px; height:60px; background-color:#03908A;position:relative;"></div></td>
+<td>$aqua-v-dark</td>
+<td>#03908A</td>
+</tr>
+<tr>
+<td><div style="width:60px; height:60px; background-color:#A3D55F;position:relative;"></div></td>
+<td>$green-brand</td>
+<td>#A3D55F</td>
+</tr>
+<tr>
+<td><div style="width:60px; height:60px; background-color:#8CB94E;position:relative;"></div></td>
+<td>$green-dark</td>
+<td>#8CB94E</td>
+</tr>
+<tr>
+<td><div style="width:60px; height:60px; background-color:#FFC845;position:relative;"></div></td>
+<td>$yellow-brand</td>
+<td>#FFC845</td>
+</tr>
+<tr>
+<td><div style="width:60px; height:60px; background-color:#FFC845;position:relative;"></div></td>
+<td>$yellow-dark</td>
+<td>#FFC845</td>
+</tr>
+<tr>
+<td><div style="width:60px; height:60px; background-color:#FFB400;position:relative;"></div></td>
+<td>$yellow-v-dark</td>
+<td>#FFB400</td>
+</tr>
+<tr>
+<td><div style="width:60px; height:60px; background-color:#F5F2ED;position:relative;"></div></td>
+<td>$grey-v-light</td>
+<td>#F5F2ED</td>
+</tr>
+<tr>
+<td><div style="width:60px; height:60px; background-color:#C8C8C8;position:relative;"></div></td>
+<td>$grey-light</td>
+<td>#C8C8C8</td>
+</tr>
+<tr>
+<td><div style="width:60px; height:60px; background-color:#CDC8C0;position:relative;"></div></td>
+<td>$grey-brand</td>
+<td>#CDC8C0</td>
+</tr>
+<tr>
+<td><div style="width:60px; height:60px; background-color:#5F5C59;position:relative;"></div></td>
+<td>$grey-dark</td>
+<td>#5F5C59</td>
+</tr>
+<tr>
+<td><div style="width:60px; height:60px; background-color:#666666;position:relative;"></div></td>
+<td>$grey-v-dark</td>
+<td>#666666</td>
+</tr>
+<tr>
+<td><div style="width:60px; height:60px; background-color:#FFFFFF;position:relative;"></div></td>
+<td>$white-brand</td>
+<td>#FFFFFF</td>
+</tr>
+<tr>
+<td><div style="width:60px; height:60px; background-color:#1E1E1E;position:relative;"></div></td>
+<td>$black-brand</td>
+<td>#1E1E1E</td>
+</tr>
+<tr>
+<td><div style="width:60px; height:60px; background-color:#5B7834;position:relative;"></div></td>
+<td>$green--confirmation</td>
+<td>#5B7834</td>
+</tr>
+</tbody></table>
+
+<h1 id="Kids BG Colors">Kids BG Colors</h1>
+
+<p>The bg-color component allows you to add a background color to any element on the site via a class.</p>
+
+<p>See the examples below.</p>
+
+<h3>BG Color Classes</h3>
+
+<table><thead>
+<tr>
+<th>Classes to use</th>
+<th>Example of use</th>
+<th>HTML</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><br>.bg-color--kids-purple</td>
+<td><div class="bg-color--kids-purple">Content/images</div></td>
+<td><code>&lt;div class=&quot;bg-color--kids-purple&quot;&gt;</code><br><code>Content/images</code><br><code>&lt;/div&gt;</code></td>
+</tr>
+<tr>
+<td><br>.bg-color--kids-blue-dark</td>
+<td><div class="bg-color--kids-blue-dark">Content/images</div></td>
+<td><code>&lt;div class=&quot;bg-color--kids-blue-dark&quot;&gt;</code><br><code>Content/images</code><br><code>&lt;/div&gt;</code></td>
+</tr>
+</tbody></table>
+
+<h1 id="Story BG Colors">Story BG Colors</h1>
+
+<p>The bg-color component allows you to add a background color to any element on the site via a class.</p>
+
+<p>See the examples below.</p>
+
+<h3>BG Color Classes</h3>
+
+<table><thead>
+<tr>
+<th>Classes to use</th>
+<th>Example of use</th>
+<th>HTML</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><br>.bg-color--story-grey</td>
+<td><div class="bg-color--story-grey">Content/images</div></td>
+<td><code>&lt;div class=&quot;bg-color--story-grey&quot;&gt;</code><br><code>Content/images</code><br><code>&lt;/div&gt;</code></td>
+</tr>
+<tr>
+<td><br>.bg-color--story-blue</td>
+<td><div class="bg-color--story-blue">Content/images</div></td>
+<td><code>&lt;div class=&quot;bg-color--story-blue&quot;&gt;</code><br><code>Content/images</code><br><code>&lt;/div&gt;</code></td>
+</tr>
+<tr>
+<td><br>.bg-color--story-beige</td>
+<td><div class="bg-color--story-beige">Content/images</div></td>
+<td><code>&lt;div class=&quot;bg-color--story-beige&quot;&gt;</code><br><code>Content/images</code><br><code>&lt;/div&gt;</code></td>
+</tr>
+</tbody></table>
+
+        </div>
+      </div>
+    </div>
+
+    <footer class="crlib-footer">
+     
+    </footer>  
+  </div>
+
+  <script src="js/vendors.min.js"></script>
+  <script type="text/javascript">
+    var jQuery_no_conflict = $.noConflict(true);
+  </script>
+  <script src="js/main.js"></script>
+  <script type="text/javascript">
+    function TypeaheadCtrl($scope) {
+      $scope.selected = undefined;
+      $scope.searchData = 
+      [
+        
+          
+        
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Badge",
+              "breadcrumb": "Molecules - Badge > Badge",
+              "path": "molecules_-_badge.html#Badge"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "BG Colors",
+              "breadcrumb": "Atoms - Colours > BG Colors",
+              "path": "atoms_-_colours.html#BG Colors"
+              },
+            
+              
+              
+              {
+              "title": "Colour palette",
+              "breadcrumb": "Atoms - Colours > Colour palette",
+              "path": "atoms_-_colours.html#Colour palette"
+              },
+            
+              
+              
+              {
+              "title": "Kids BG Colors",
+              "breadcrumb": "Atoms - Colours > Kids BG Colors",
+              "path": "atoms_-_colours.html#Kids BG Colors"
+              },
+            
+              
+              
+              {
+              "title": "Story BG Colors",
+              "breadcrumb": "Atoms - Colours > Story BG Colors",
+              "path": "atoms_-_colours.html#Story BG Colors"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Buttons",
+              "breadcrumb": "Atoms - CTAs > Buttons",
+              "path": "atoms_-_ctas.html#buttons"
+              },
+            
+              
+              
+              {
+              "title": "Inline text links",
+              "breadcrumb": "Atoms - CTAs > Inline text links",
+              "path": "atoms_-_ctas.html#Inline text links"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Form elements",
+              "breadcrumb": "Atoms - Form elments > Form elements",
+              "path": "atoms_-_form_elments.html#Form elements"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Grid gutter",
+              "breadcrumb": "Atoms - Grid > Grid gutter",
+              "path": "atoms_-_grid.html#Grid gutter"
+              },
+            
+              
+              
+              {
+              "title": "Grid sizes",
+              "breadcrumb": "Atoms - Grid > Grid sizes",
+              "path": "atoms_-_grid.html#Grid sizes"
+              },
+            
+              
+              
+              {
+              "title": "Mixed grids",
+              "breadcrumb": "Atoms - Grid > Mixed grids",
+              "path": "atoms_-_grid.html#Mixed grids"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "HR",
+              "breadcrumb": "Atoms - Typography > HR",
+              "path": "atoms_-_typography.html#HR"
+              },
+            
+              
+              
+              {
+              "title": "Paragraph styles/Sizes",
+              "breadcrumb": "Atoms - Typography > Paragraph styles/Sizes",
+              "path": "atoms_-_typography.html#Paragraph styles/Sizes"
+              },
+            
+              
+              
+              {
+              "title": "Titles",
+              "breadcrumb": "Atoms - Typography > Titles",
+              "path": "atoms_-_typography.html#Titles"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Icon font",
+              "breadcrumb": "Atoms - Icons > Icon font",
+              "path": "atoms_-_icons.html#Icon font"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Lists",
+              "breadcrumb": "Atoms - Tables and lists > Lists",
+              "path": "atoms_-_tables_and_lists.html#Lists"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Pane Image",
+              "breadcrumb": "Organisims - Panes > Pane Image",
+              "path": "organisims_-_panes.html#Pane Image"
+              },
+            
+              
+              
+              {
+              "title": "Pane SVG",
+              "breadcrumb": "Organisims - Panes > Pane SVG",
+              "path": "organisims_-_panes.html#Pane SVG"
+              },
+            
+              
+              
+              {
+              "title": "Pane Text",
+              "breadcrumb": "Organisims - Panes > Pane Text",
+              "path": "organisims_-_panes.html#Pane Text"
+              },
+            
+              
+              
+              {
+              "title": "Pane Video",
+              "breadcrumb": "Organisims - Panes > Pane Video",
+              "path": "organisims_-_panes.html#Pane Video"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Rows",
+              "breadcrumb": "Organisims - Rows > Rows",
+              "path": "organisims_-_rows.html#Rows"
+              },
+            
+          
+        
+      {}];
+      $scope.onSelect = function ($item, $model, $label) {
+        window.location.replace($item.path);
+      };
+    }
+  </script>
+  <script type="text/ng-template" id="customTemplate.html">
+    <a href="{{match.model.path}}">
+      <p class="crlib-search-title">{{match.model.title}}</p>
+      <p class="crlib-search-path">{{match.model.breadcrumb}}</p>
+    </a>
+  </script>
+  
+  <!-- Source Components -->
+  
+</body>
+</html>

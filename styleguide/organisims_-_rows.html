@@ -1,0 +1,775 @@
+
+<!DOCTYPE html>
+<html ng-app="crlib">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Organisims - Rows</title>
+
+    <!-- Styleguide CSS -->
+    <link rel="stylesheet" href="css/styleguide.css">
+
+    <!-- Source CSS -->
+    
+      
+        <link rel="stylesheet" href="../css/crlib.styles.css">
+      
+    
+
+    <!--[if lt IE 9]>
+      <script src="js/polyfill/html5shiv.js"></script>
+      <script src="js/polyfill/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+  <body class="crlib-body"  ng-controller="MainController">
+
+    <div class="sb-slidebar sb-left crlib-sidenav sb-style-push">
+
+      
+      
+        
+        
+          
+        
+      
+        
+        
+          
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+          
+        
+      
+        
+        
+      
+
+      <nav class="crlib-nav">
+        <ul>
+          
+            <li><a href="index.html">Home</a></li>
+          
+        </ul>
+        
+        <div class="crlib-cat">
+          <h3 class="crlib-cat--molecules">Molecules</h3>
+          <span class="crlib-inline crlib-inline--molecules">
+        </div>
+          <ul>
+          
+            
+              
+              
+                <li><a href="molecules_-_badge.html">Badge</a></li>
+              
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+          </ul>
+        
+        <div class="crlib-cat">
+          <h3 class="crlib-cat--atoms">Atoms</h3>
+          <span class="crlib-inline crlib-inline--atoms">
+        </div>
+          <ul>
+          
+            
+          
+            
+              
+              
+                <li><a href="atoms_-_colours.html">Colours</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="atoms_-_ctas.html">CTAs</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="atoms_-_form_elments.html">Form elments</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="atoms_-_grid.html">Grid</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="atoms_-_typography.html">Typography</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="atoms_-_icons.html">Icons</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="atoms_-_tables_and_lists.html">Tables and lists</a></li>
+              
+            
+          
+            
+          
+            
+          
+          </ul>
+        
+        <div class="crlib-cat">
+          <h3 class="crlib-cat--organisims">Organisims</h3>
+          <span class="crlib-inline crlib-inline--organisims">
+        </div>
+          <ul>
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+              
+                <li><a href="organisims_-_panes.html">Panes</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a class="active" href="organisims_-_rows.html">Rows</a></li>
+              
+            
+          
+          </ul>
+        
+      </nav>
+    </div>
+
+    <div class="crlib-header sb-slide">
+        <span class="crlib-logo">PATTERN LIBRARY</span>
+      <div id="open-left" class="crlib-menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="crlib-search-wrapper" ng-controller="TypeaheadCtrl">
+        <input id="crlib-search" type="text" class="form-control crlib-search" ng-model="customSelected" placeholder="Search" typeahead="data as data.title for data in searchData | filter:{title:$viewValue}" typeahead-template-url="customTemplate.html" class="form-control" typeahead-on-select="onSelect($item, $model, $label)">
+      </div>
+    </div>
+
+    <div id="sb-site">
+
+      <div class="crlib-container">
+
+        <nav id="crlib-inside-nav" class="crlib-inside-nav" bs-affix>
+          <h2 class="">Rows</h2>
+          <ul bs-scrollspy-list data-offset="-30">
+            
+              
+                <li><a href="#Rows">Rows</a></li>
+              
+            
+          </ul>
+        </nav>
+
+        <div class="crlib-content-wrapper clearfix">
+          <div class="crlib-content">
+            <div class="crlib-inline crlib-inline--red">123</div>
+            <div class="crlib-inline crlib-inline--blue">123</div>
+            <div class="crlib-inline crlib-inline--yellow">123</div><h1 id="Rows">Rows</h1>
+
+<p>The following classes for the row component all respond to all breakpoints.</p>
+
+<p>The row styles are created in HTML by adding the required row class modifiers to an <code>&lt;div&gt;</code> or a <code>&lt;section&gt;</code> with a <code>.row--</code> class.
+There is no core .row class as that name is reserved for Bootstrap is is not used here.</p>
+
+<p>See the examples below.</p>
+
+<h3>Row base class</h3>
+
+<p>The class .row--content includes all default margins and paddings accross all breakpoints.</p>
+
+<table><thead>
+<tr>
+<th>Classes to use</th>
+<th>Example of use in HTML</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>.row--content</td>
+<td><code>&lt;div class=&quot;row-content&quot;&gt;</code><br><code>Content/images</code><br><code>&lt;/div&gt;</code></td>
+</tr>
+</tbody></table>
+
+<h3>Row classes for margins and paddings</h3>
+
+<table><thead>
+<tr>
+<th>Classes to use</th>
+<th>Example of use in HTML</th>
+<th>HTML</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>.row--content<br>.row--padding-none</td>
+<td><div class="row--content row--padding-none"><br>Content/images<br></div></td>
+<td><code>&lt;div class=&quot;row--content row--padding-none&quot;&gt;</code><br><code>Content/images</code><br><code>&lt;/div&gt;</code></td>
+</tr>
+<tr>
+<td>.row--content<br>.row--small</td>
+<td><div class="row--content row--small"><br>Content/images<br></div></td>
+<td><code>&lt;div class=&quot;row--content row--small&quot;&gt;</code><br><code>Content/images</code><br><code>&lt;/div&gt;</code></td>
+</tr>
+</tbody></table>
+
+<p>### Row classes for backgrounds</p>
+
+<table><thead>
+<tr>
+<th>Classes to use</th>
+<th>Example of use</th>
+<th>HTML</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>.row--content<br>.row--bg-black-circles</td>
+<td><div class="row--content row--bg-black-circles"><br>Content/images<br></div></td>
+<td><code>&lt;div class=&quot;row--content row--bg-black-circles&quot;&gt;</code><br><code>Content/images</code><br><code>&lt;/div&gt;</code></td>
+</tr>
+<tr>
+<td>.row--content<br>.row--bg-black-dots</td>
+<td><div class="row--content row--bg-black-dots"><br>Content/images<br></div></td>
+<td><code>&lt;div class=&quot;row--content row--bg-black-dots&quot;&gt;</code><br><code>Content/images</code><br><code>&lt;/div&gt;</code></td>
+</tr>
+<tr>
+<td>.row--content<br>.row--bg-black-triangles</td>
+<td><div class="row--content row--bg-black-triangles"><br>Content/images<br></div></td>
+<td><code>&lt;div class=&quot;row--content row--bg-black-triangles&quot;&gt;</code><br><code>Content/images</code><br><code>&lt;/div&gt;</code></td>
+</tr>
+<tr>
+<td>.row--content<br>.row--bg-black-zigzags</td>
+<td><div class="row--content row--bg-black-zigzags"><br>Content/images<br></div></td>
+<td><code>&lt;div class=&quot;row--content row--bg-black-zigzags&quot;&gt;</code><br><code>Content/images</code><br><code>&lt;/div&gt;</code></td>
+</tr>
+<tr>
+<td>.row--content<br>.row--bg-white-circles</td>
+<td><div class="row--content row--bg-white-circles"><br>Content/images<br></div></td>
+<td><code>&lt;div class=&quot;row--content row--bg-white-circles&quot;&gt;</code><br><code>Content/images</code><br><code>&lt;/div&gt;</code></td>
+</tr>
+<tr>
+<td>.row--content<br>.row--bg-white-stars</td>
+<td><div class="row--content row--bg-white-stars"><br>Content/images<br></div></td>
+<td><code>&lt;div class=&quot;row--content row--bg-white-stars&quot;&gt;</code><br><code>Content/images</code><br><code>&lt;/div&gt;</code></td>
+</tr>
+<tr>
+<td>.row--content<br>.row--bg-grey-dots</td>
+<td><div class="row--content row--bg-grey-dots"><br>Content/images<br></div></td>
+<td><code>&lt;div class=&quot;row--content row--bg-grey-dots&quot;&gt;</code><br><code>Content/images</code><br><code>&lt;/div&gt;</code></td>
+</tr>
+<tr>
+<td>.row--content<br>.row--bg-grey-stars</td>
+<td><div class="row--content row--bg-grey-stars"><br>Content/images<br></div></td>
+<td><code>&lt;div class=&quot;row--content row--bg-grey-stars&quot;&gt;</code><br><code>Content/images</code><br><code>&lt;/div&gt;</code></td>
+</tr>
+<tr>
+<td>.row--content<br>.row--bg-grey-triangles</td>
+<td><div class="row--content row--bg-grey-triangles"><br>Content/images<br></div></td>
+<td><code>&lt;div class=&quot;row--content row--bg-grey-triangles&quot;&gt;</code><br><code>Content/images</code><br><code>&lt;/div&gt;</code></td>
+</tr>
+<tr>
+<td>.row--content<br>.row--bg-grey-zigzags</td>
+<td><div class="row--content row--bg-grey-zigzags"><br>Content/images<br></div></td>
+<td><code>&lt;div class=&quot;row--content row--bg-grey-zigzags&quot;&gt;</code><br><code>Content/images</code><br><code>&lt;/div&gt;</code></td>
+</tr>
+<tr>
+<td>.row--content<br>.row--bg-pink-soil</td>
+<td><div class="row--content row--bg-pink-soil"><br>Content/images<br></div></td>
+<td><code>&lt;div class=&quot;row--content row--bg-pink-soil&quot;&gt;</code><br><code>Content/images</code><br><code>&lt;/div&gt;</code></td>
+</tr>
+<tr>
+<td>.row--content<br>.row--bg-selfie</td>
+<td><div class="row--content row--bg-selfie"><br>Content/images<br></div></td>
+<td><code>&lt;div class=&quot;row--content row--bg-selfie&quot;&gt;</code><br><code>Content/images</code><br><code>&lt;/div&gt;</code></td>
+</tr>
+</tbody></table>
+
+<h2>How to use Rows across the site</h2>
+
+<p>Specific Row classes are only required when they are specifically mentioned below, if not the default row class (added already) will work fine.</p>
+
+<h3>Row Small Copy</h3>
+
+<p>Body copy below should be <code>&lt;h3 class=&quot;type--centred type--white type--margin-large&quot;&gt;Some text&lt;/h3&gt;</code><br/><br/></p>
+
+<table><thead>
+<tr>
+<th>Row Small copy</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><img src="../styleguide_assets/img/row_small_copy.png" alt="" style="max-width: 700px;" /><br/><br/></td>
+</tr>
+</tbody></table>
+
+<p><br/></p>
+
+<h3>Row Medium Copy</h3>
+
+<p>Row class should be <code>pane-text--medium-copy</code> while the title should be <code>&lt;h2 class=&quot;type-centred&quot;&gt;Title&lt;/h2&gt;</code> and the copy should be <code>&lt;p class=&quot;type--lg type--centred&quot;&gt;&lt;/p&gt;</code><br/><br/></p>
+
+<table><thead>
+<tr>
+<th>Row Medium Copy</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><img src="../styleguide_assets/img/row_medium_copy.png" alt="" style="max-width: 700px;" /></td>
+</tr>
+</tbody></table>
+
+<p><br/></p>
+
+<h3>Row Large Copy</h3>
+
+<p>The title should be <code>&lt;h2 class=&quot;type-centred type--white type--row-large-copy&quot;&gt;Title&lt;/h2&gt;</code> while the first paragraph should be <code>&lt;p class=&quot;type--lg type--lg-negative-margin type--centred--xs type--entred--sm type--white&quot;&gt;&lt;/p&gt;</code> and the second paragraph should be <code>&lt;p class=&quot;type--white type--centred--xs type--entred--sm&quot;&gt;&lt;/p&gt;</code> and the button should be <code>&lt;p class=&quot;type--centred--xs type--centred--sm type--row-large-margin-top&quot;&gt;&lt;a class=&quot;btn btn-color btn-ghost&quot;&gt;&lt;/a&gt;&lt;/p&gt;</code><br/><br/></p>
+
+<table><thead>
+<tr>
+<th>Row Large Copy</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><img src="../styleguide_assets/img/row_large_copy.png" alt="" style="max-width: 700px;" /></td>
+</tr>
+</tbody></table>
+
+<p><br/></p>
+
+<h3>Row Main Center</h3>
+
+<p>Row class should be <code>pane-image--row-center</code> while the title should be <code>&lt;h3 class=&quot;type--centred type--margin-large&quot;&gt;&lt;/h3&gt;</code> and the button should be <code>&lt;p class=&quot;type--centred &quot;&gt;&lt;a class=&quot;btn btn-color&quot;&gt;&lt;/a&gt;&lt;/p&gt;</code><br/><br/></p>
+
+<table><thead>
+<tr>
+<th>Row Main Center</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><img src="../styleguide_assets/img/row_main_center.png" alt="" style="max-width: 700px;" /></td>
+</tr>
+</tbody></table>
+
+<p><br/></p>
+
+<h3>Row Quote</h3>
+
+<p>The quote should be <code>&lt;h2 class=&quot;type--centred type--margin-none&quot;&gt;&lt;/h2&gt;</code><br/><br/></p>
+
+<table><thead>
+<tr>
+<th>Row Quote</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><img src="../styleguide_assets/img/row_quote.png" alt="" style="max-width: 700px;" /></td>
+</tr>
+</tbody></table>
+
+<p><br/></p>
+
+<h3>Row Two Messages</h3>
+
+<p>Row class should be <code>pane-image__wrapper--multiple-images</code><br/>
+Header should be <code>&lt;h2 class=&quot;type--centred&quot;&gt;&lt;/h2&gt;</code><br/>
+Two sets of mini panels are required, the image in the first mini panel should have class <code>pane-image--first-class</code> applied<br/>
+Mini panels should be set to 12xs 6sm and 4md with a 2md offset for the first one<br/>
+Title should be <code>&lt;h3 class=&quot;type--centred&quot;&gt;&lt;/h3&gt;</code><br/>
+Copy should be <code>&lt;p class=&quot;type--centred&quot;&gt;&lt;/p&gt;</code><br/>
+Button should be <code>&lt;p class=&quot;type--centred&quot;&gt;&lt;a class=&quot;btn btn-color&quot;&gt;&lt;/a&gt;&lt;/p&gt;</code><br/><br/></p>
+
+<table><thead>
+<tr>
+<th>Row Two Messages</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><img src="../styleguide_assets/img/row_two_messages.png" alt="" style="max-width: 700px;" /></td>
+</tr>
+</tbody></table>
+
+<p><br/></p>
+
+<h3>Row Three Messages template 1</h3>
+
+<p>Row class should be <code>pane-image__wrapper--multiple-images</code><br/>
+Header should be <code>&lt;h2 class=&quot;type--white type--centred&quot;&gt;&lt;/h2&gt;</code><br/>
+Copy above messages should be <code>&lt;p class=&quot;type--lg type--white type--centred&quot;&gt;&lt;/p&gt;</code><br/>
+Three sets of mini panels are required, the image in the first mini panel should have class <code>pane-image--first-class</code> applied<br/>
+Mini panels should be set to 12xs 4sm<br/>
+Button should be <code>&lt;p class=&quot;type--centred&quot;&gt;&lt;a class=&quot;btn btn-color btn-ghost&quot;&gt;&lt;/a&gt;&lt;/p&gt;</code><br/><br/></p>
+
+<table><thead>
+<tr>
+<th>Row Three Messages template 1</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><img src="../styleguide_assets/img/row_three_messages_var_1.png" alt="" style="max-width: 700px;" /></td>
+</tr>
+</tbody></table>
+
+<p><br/></p>
+
+<h3>Row Three Messages template 2</h3>
+
+<p>Row class should be <code>pane-image__wrapper--multiple-images</code><br/>
+Header should be <code>&lt;h2 class=&quot;type--centred&quot;&gt;&lt;/h2&gt;</code><br/>
+Three sets of mini panels are required, the image in the first mini panel should have class <code>pane-image--first-class</code> applied<br/>
+Copy should be <code>&lt;p class=&quot;type--centred type--lg&quot;&gt;&lt;/p&gt;</code><br/>
+The link should be <code>&lt;p class=&quot;type--centred type--semibold&quot;&gt;&lt;a class=&quot;link--color&quot;&gt;&lt;/a&gt;&lt;/p&gt;</code><br/><br/></p>
+
+<table><thead>
+<tr>
+<th>Row Three Messages template 2</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><img src="../styleguide_assets/img/row_three_messages_var_2.png" alt="" style="max-width: 700px;" /></td>
+</tr>
+</tbody></table>
+
+<p><br/></p>
+
+<h3>Row Three Messages template 3</h3>
+
+<p>Row class should be <code>pane-image__wrapper--multiple-images</code><br/>
+Header should be <code>&lt;h3 class=&quot;type--centred&quot;&gt;&lt;/h3&gt;</code><br/>
+Three sets of mini panels are required, the image in the first mini panel should have class <code>pane-image--first-class</code> applied<br/>
+Copy should be <code>&lt;p class=&quot;type--centred&quot;&gt;&lt;/p&gt;</code><br/>
+The link should be <code>&lt;p class=&quot;type--centred&quot;&gt;&lt;a class=&quot;btn btn-color&quot;&gt;&lt;/a&gt;&lt;/p&gt;</code><br/><br/></p>
+
+<table><thead>
+<tr>
+<th>Row Three Messages template 3</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><img src="../styleguide_assets/img/row_three_messages_var_3.png" alt="" style="max-width: 700px;" /></td>
+</tr>
+</tbody></table>
+
+<p><br/></p>
+
+        </div>
+      </div>
+    </div>
+
+    <footer class="crlib-footer">
+     
+    </footer>  
+  </div>
+
+  <script src="js/vendors.min.js"></script>
+  <script type="text/javascript">
+    var jQuery_no_conflict = $.noConflict(true);
+  </script>
+  <script src="js/main.js"></script>
+  <script type="text/javascript">
+    function TypeaheadCtrl($scope) {
+      $scope.selected = undefined;
+      $scope.searchData = 
+      [
+        
+          
+        
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Badge",
+              "breadcrumb": "Molecules - Badge > Badge",
+              "path": "molecules_-_badge.html#Badge"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "BG Colors",
+              "breadcrumb": "Atoms - Colours > BG Colors",
+              "path": "atoms_-_colours.html#BG Colors"
+              },
+            
+              
+              
+              {
+              "title": "Colour palette",
+              "breadcrumb": "Atoms - Colours > Colour palette",
+              "path": "atoms_-_colours.html#Colour palette"
+              },
+            
+              
+              
+              {
+              "title": "Kids BG Colors",
+              "breadcrumb": "Atoms - Colours > Kids BG Colors",
+              "path": "atoms_-_colours.html#Kids BG Colors"
+              },
+            
+              
+              
+              {
+              "title": "Story BG Colors",
+              "breadcrumb": "Atoms - Colours > Story BG Colors",
+              "path": "atoms_-_colours.html#Story BG Colors"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Buttons",
+              "breadcrumb": "Atoms - CTAs > Buttons",
+              "path": "atoms_-_ctas.html#buttons"
+              },
+            
+              
+              
+              {
+              "title": "Inline text links",
+              "breadcrumb": "Atoms - CTAs > Inline text links",
+              "path": "atoms_-_ctas.html#Inline text links"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Form elements",
+              "breadcrumb": "Atoms - Form elments > Form elements",
+              "path": "atoms_-_form_elments.html#Form elements"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Grid gutter",
+              "breadcrumb": "Atoms - Grid > Grid gutter",
+              "path": "atoms_-_grid.html#Grid gutter"
+              },
+            
+              
+              
+              {
+              "title": "Grid sizes",
+              "breadcrumb": "Atoms - Grid > Grid sizes",
+              "path": "atoms_-_grid.html#Grid sizes"
+              },
+            
+              
+              
+              {
+              "title": "Mixed grids",
+              "breadcrumb": "Atoms - Grid > Mixed grids",
+              "path": "atoms_-_grid.html#Mixed grids"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "HR",
+              "breadcrumb": "Atoms - Typography > HR",
+              "path": "atoms_-_typography.html#HR"
+              },
+            
+              
+              
+              {
+              "title": "Paragraph styles/Sizes",
+              "breadcrumb": "Atoms - Typography > Paragraph styles/Sizes",
+              "path": "atoms_-_typography.html#Paragraph styles/Sizes"
+              },
+            
+              
+              
+              {
+              "title": "Titles",
+              "breadcrumb": "Atoms - Typography > Titles",
+              "path": "atoms_-_typography.html#Titles"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Icon font",
+              "breadcrumb": "Atoms - Icons > Icon font",
+              "path": "atoms_-_icons.html#Icon font"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Lists",
+              "breadcrumb": "Atoms - Tables and lists > Lists",
+              "path": "atoms_-_tables_and_lists.html#Lists"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Pane Image",
+              "breadcrumb": "Organisims - Panes > Pane Image",
+              "path": "organisims_-_panes.html#Pane Image"
+              },
+            
+              
+              
+              {
+              "title": "Pane SVG",
+              "breadcrumb": "Organisims - Panes > Pane SVG",
+              "path": "organisims_-_panes.html#Pane SVG"
+              },
+            
+              
+              
+              {
+              "title": "Pane Text",
+              "breadcrumb": "Organisims - Panes > Pane Text",
+              "path": "organisims_-_panes.html#Pane Text"
+              },
+            
+              
+              
+              {
+              "title": "Pane Video",
+              "breadcrumb": "Organisims - Panes > Pane Video",
+              "path": "organisims_-_panes.html#Pane Video"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Rows",
+              "breadcrumb": "Organisims - Rows > Rows",
+              "path": "organisims_-_rows.html#Rows"
+              },
+            
+          
+        
+      {}];
+      $scope.onSelect = function ($item, $model, $label) {
+        window.location.replace($item.path);
+      };
+    }
+  </script>
+  <script type="text/ng-template" id="customTemplate.html">
+    <a href="{{match.model.path}}">
+      <p class="crlib-search-title">{{match.model.title}}</p>
+      <p class="crlib-search-path">{{match.model.breadcrumb}}</p>
+    </a>
+  </script>
+  
+  <!-- Source Components -->
+  
+</body>
+</html>

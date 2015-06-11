@@ -1,0 +1,926 @@
+
+<!DOCTYPE html>
+<html ng-app="crlib">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Atoms - CTAs</title>
+
+    <!-- Styleguide CSS -->
+    <link rel="stylesheet" href="css/styleguide.css">
+
+    <!-- Source CSS -->
+    
+      
+        <link rel="stylesheet" href="../css/crlib.styles.css">
+      
+    
+
+    <!--[if lt IE 9]>
+      <script src="js/polyfill/html5shiv.js"></script>
+      <script src="js/polyfill/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+  <body class="crlib-body"  ng-controller="MainController">
+
+    <div class="sb-slidebar sb-left crlib-sidenav sb-style-push">
+
+      
+      
+        
+        
+          
+        
+      
+        
+        
+          
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+          
+        
+      
+        
+        
+      
+
+      <nav class="crlib-nav">
+        <ul>
+          
+            <li><a href="index.html">Home</a></li>
+          
+        </ul>
+        
+        <div class="crlib-cat">
+          <h3 class="crlib-cat--molecules">Molecules</h3>
+          <span class="crlib-inline crlib-inline--molecules">
+        </div>
+          <ul>
+          
+            
+              
+              
+                <li><a href="molecules_-_badge.html">Badge</a></li>
+              
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+          </ul>
+        
+        <div class="crlib-cat">
+          <h3 class="crlib-cat--atoms">Atoms</h3>
+          <span class="crlib-inline crlib-inline--atoms">
+        </div>
+          <ul>
+          
+            
+          
+            
+              
+              
+                <li><a href="atoms_-_colours.html">Colours</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a class="active" href="atoms_-_ctas.html">CTAs</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="atoms_-_form_elments.html">Form elments</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="atoms_-_grid.html">Grid</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="atoms_-_typography.html">Typography</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="atoms_-_icons.html">Icons</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="atoms_-_tables_and_lists.html">Tables and lists</a></li>
+              
+            
+          
+            
+          
+            
+          
+          </ul>
+        
+        <div class="crlib-cat">
+          <h3 class="crlib-cat--organisims">Organisims</h3>
+          <span class="crlib-inline crlib-inline--organisims">
+        </div>
+          <ul>
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+              
+                <li><a href="organisims_-_panes.html">Panes</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="organisims_-_rows.html">Rows</a></li>
+              
+            
+          
+          </ul>
+        
+      </nav>
+    </div>
+
+    <div class="crlib-header sb-slide">
+        <span class="crlib-logo">PATTERN LIBRARY</span>
+      <div id="open-left" class="crlib-menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="crlib-search-wrapper" ng-controller="TypeaheadCtrl">
+        <input id="crlib-search" type="text" class="form-control crlib-search" ng-model="customSelected" placeholder="Search" typeahead="data as data.title for data in searchData | filter:{title:$viewValue}" typeahead-template-url="customTemplate.html" class="form-control" typeahead-on-select="onSelect($item, $model, $label)">
+      </div>
+    </div>
+
+    <div id="sb-site">
+
+      <div class="crlib-container">
+
+        <nav id="crlib-inside-nav" class="crlib-inside-nav" bs-affix>
+          <h2 class="">CTAs</h2>
+          <ul bs-scrollspy-list data-offset="-30">
+            
+              
+                <li><a href="#buttons">Buttons</a></li>
+              
+            
+              
+                <li><a href="#Inline text links">Inline text links</a></li>
+              
+            
+          </ul>
+        </nav>
+
+        <div class="crlib-content-wrapper clearfix">
+          <div class="crlib-content">
+            <div class="crlib-inline crlib-inline--red">123</div>
+            <div class="crlib-inline crlib-inline--blue">123</div>
+            <div class="crlib-inline crlib-inline--yellow">123</div><h1 id="buttons">Buttons</h1>
+
+<p>The following button styles are used for the main call-to-action on the page; any actions which need to stand out and form functionality. By default each type of content area is assigned a style and colour button.</p>
+
+<p>Buttons styles are created in HTML by adding the required button class modifiers to an <code>&lt;a&gt;</code> with a <code>.btn</code> class.</p>
+
+<p>All buttons display to the full width of their parent on mobile (xs).</p>
+
+<p>For small (sm), medium (md) and large (lg) breakpoints buttons display based on the width of ther content.</p>
+
+<p>Each brand colour typically has two additional variations - dark and darker. Buttons use the dark variable background colour for default and the darker variable for the hover state.</p>
+
+<p>See the examples below.</p>
+
+<h3>Colour Buttons</h3>
+
+<table><thead>
+<tr>
+<th>Button name</th>
+<th>Classes to use</th>
+<th>Example</th>
+<th>HTML</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>@pink</td>
+<td>.btn<br>.btn-pink</td>
+<td><a href="#" class="btn btn-pink">Click here</a></td>
+<td><code>&lt;a href=&quot;#&quot; class=&quot;btn btn-pink&quot;&gt;Click here&lt;/a&gt;</code></td>
+</tr>
+<tr>
+<td>@orange</td>
+<td>.btn<br>.btn-orange</td>
+<td><a href="#" class="btn btn-orange">Click here</a></td>
+<td><code>&lt;a href=&quot;#&quot; class=&quot;btn btn-orange&quot;&gt;Click here&lt;/a&gt;</code></td>
+</tr>
+<tr>
+<td>@red</td>
+<td>.btn<br>.btn-red</td>
+<td><a href="#" class="btn btn-red">Click here</a></td>
+<td><code>&lt;a href=&quot;#&quot; class=&quot;btn btn-red&quot;&gt;Click here&lt;/a&gt;</code></td>
+</tr>
+<tr>
+<td>@purple</td>
+<td>.btn<br>.btn-purple</td>
+<td><a href="#" class="btn btn-purple">Click here</a></td>
+<td><code>&lt;a href=&quot;#&quot; class=&quot;btn btn-purple&quot;&gt;Click here&lt;/a&gt;</code></td>
+</tr>
+<tr>
+<td>@blue</td>
+<td>.btn<br>.btn-blue</td>
+<td><a href="#" class="btn btn-blue">Click here</a></td>
+<td><code>&lt;a href=&quot;#&quot; class=&quot;btn btn-blue&quot;&gt;Click here&lt;/a&gt;</code></td>
+</tr>
+<tr>
+<td>@blue--fb</td>
+<td>.btn<br>.btn-blue--fb</td>
+<td><a href="#" class="btn btn-blue--fb">Click here</a></td>
+<td><code>&lt;a href=&quot;#&quot; clas=&quot;btn btn-blue--fb&quot;&gt;Click here&lt;/a&gt;</code></td>
+</tr>
+<tr>
+<td>@aqua</td>
+<td>.btn<br>.btn-aqua</td>
+<td><a href="#" class="btn btn-aqua">Click here</a></td>
+<td><code>&lt;a href=&quot;#&quot; class=&quot;btn btn-aqua&quot;&gt;Click here&lt;/a&gt;</code></td>
+</tr>
+<tr>
+<td>@green</td>
+<td>.btn<br>.btn-green</td>
+<td><a href="#" class="btn btn-green">Click here</a></td>
+<td><code>&lt;a href=&quot;#&quot; class=&quot;btn btn-green&quot;&gt;Click here&lt;/a&gt;</code></td>
+</tr>
+<tr>
+<td>@yellow</td>
+<td>.btn<br>.btn-yellow</td>
+<td><a href="#" class="btn btn-yellow">Click here</a></td>
+<td><code>&lt;a href=&quot;#&quot; class=&quot;btn btn-yellow&quot;&gt;Click here&lt;/a&gt;</code></td>
+</tr>
+<tr>
+<td>@grey</td>
+<td>.btn<br>.btn-grey</td>
+<td><a href="#" class="btn btn-grey">Click here</a></td>
+<td><code>&lt;a href=&quot;#&quot; class=&quot;btn btn-grey&quot;&gt;Click here&lt;/a&gt;</code></td>
+</tr>
+<tr>
+<td>@black</td>
+<td>.btn<br>.btn-black</td>
+<td><a href="#" class="btn btn-black">Click here</a></td>
+<td><code>&lt;a href=&quot;#&quot; class=&quot;btn btn-black&quot;&gt;Click here&lt;/a&gt;</code></td>
+</tr>
+<tr>
+<td>@light-grey</td>
+<td>.btn<br>.btn-light-grey</td>
+<td><a href="#" class="btn btn-light-grey">Click here</a></td>
+<td><code>&lt;a href=&quot;#&quot; class=&quot;btn btn-light-grey&quot;&gt;Click here&lt;/a&gt;</code></td>
+</tr>
+</tbody></table>
+
+<h3>Ghost Buttons</h3>
+
+<p>Use ghost buttons when the button is to sit above a coloured background.</p>
+
+<p>All ghost buttons have a 2 pixel white border and white anchor text.</p>
+
+<p>Note: adding a ghost button above a white background will result in an invisible button, so only use them on coloured backgrounds.</p>
+
+<p>A colour class still needs to be added to the button so the anchor text can transition to that colour on hover.</p>
+
+<p>See below for examples.</p>
+
+<table><thead>
+<tr>
+<th>Button name</th>
+<th>Classes to use</th>
+<th>Example</th>
+<th>HTML</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>@pink-ghost</td>
+<td>.btn<br>.btn-pink<br>.btn-ghost</td>
+<td><div class="docs-bg-ghost pink"><a href="#" class="btn btn-pink btn-ghost">Click here</a></div></td>
+<td><code>&lt;a href=&quot;#&quot; class=&quot;btn btn-pink btn-ghost&quot;&gt;Click here&lt;/a&gt;</code></td>
+</tr>
+<tr>
+<td>@orange-ghost</td>
+<td>.btn<br>.btn-orange<br>.btn-ghost</td>
+<td><div class="docs-bg-ghost orange"><a href="#" class="btn btn-orange btn-ghost">Click here</a></div></td>
+<td><code>&lt;a href=&quot;#&quot; class=&quot;btn btn-orange btn-ghost&quot;&gt;Click here&lt;/a&gt;</code></td>
+</tr>
+<tr>
+<td>@red-ghost</td>
+<td>.btn<br>.btn-red<br>.btn-ghost</td>
+<td><div class="docs-bg-ghost red"><a href="#" class="btn btn-red btn-ghost">Click here</a></div></td>
+<td><code>&lt;a href=&quot;#&quot; class=&quot;btn btn-red btn-ghost&quot;&gt;Click here&lt;/a&gt;</code></td>
+</tr>
+<tr>
+<td>@purple-ghost</td>
+<td>.btn<br>.btn-purple<br>.btn-ghost</td>
+<td><div class="docs-bg-ghost purple"><a href="#" class="btn btn-purple btn-ghost">Click here</a></div></td>
+<td><code>&lt;a href=&quot;#&quot; class=&quot;btn btn-purple btn-ghost&quot;&gt;Click here&lt;/a&gt;</code></td>
+</tr>
+<tr>
+<td>@blue-ghost</td>
+<td>.btn<br>.btn-blue<br>.btn-ghost</td>
+<td><div class="docs-bg-ghost blue"><a href="#" class="btn btn-blue btn-ghost">Click here</a></div></td>
+<td><code>&lt;a href=&quot;#&quot; class=&quot;btn btn-blue btn-ghost&quot;&gt;Click here&lt;/a&gt;</code></td>
+</tr>
+<tr>
+<td>@blue--fb-ghost</td>
+<td>.btn<br>.btn-blue--fb<br>.btn-ghost</td>
+<td><div class="docs-bg-ghost blue--fb"><a href="#" class="btn btn-blue--fb btn-ghost">Click here</a></div></td>
+<td><code>&lt;a href=&quot;#&quot; class=&quot;btn btn-blue--fb btn-ghost&quot;&gt;Click here&lt;/a&gt;</code></td>
+</tr>
+<tr>
+<td>@aqua-ghost</td>
+<td>.btn<br>.btn-aqua<br>.btn-ghost</td>
+<td><div class="docs-bg-ghost aqua"><a href="#" class="btn btn-aqua btn-ghost">Click here</a></td>
+<td><code>&lt;a href=&quot;#&quot; class=&quot;btn btn-aqua btn-ghost&quot;&gt;Click here&lt;/a&gt;</code></td>
+</tr>
+<tr>
+<td>@green-ghost</td>
+<td>.btn<br>.btn-green<br>.btn-ghost</td>
+<td><div class="docs-bg-ghost green"><a href="#" class="btn btn-green btn-ghost">Click here</a></div></td>
+<td><code>&lt;a href=&quot;#&quot; class=&quot;btn btn-green btn-ghost&quot;&gt;Click here&lt;/a&gt;</code></td>
+</tr>
+<tr>
+<td>@yellow-ghost</td>
+<td>.btn<br>.btn-yellow<br>.btn-ghost</td>
+<td><div class="docs-bg-ghost yellow"><a href="#" class="btn btn-yellow btn-ghost">Click here</a></div></td>
+<td><code>&lt;a href=&quot;#&quot; class=&quot;btn btn-yellow btn-ghost&quot;&gt;Click here&lt;/a&gt;</code></td>
+</tr>
+<tr>
+<td>@grey-ghost</td>
+<td>.btn<br>.btn-grey<br>.btn-ghost</td>
+<td><div class="docs-bg-ghost grey"><a href="#" class="btn btn-grey btn-ghost">Click here</a></div></td>
+<td><code>&lt;a href=&quot;#&quot; class=&quot;btn btn-grey btn-ghost&quot;&gt;Click here&lt;/a&gt;</code></td>
+</tr>
+<tr>
+<td>@black-ghost</td>
+<td>.btn<br>.btn-black<br>.btn-ghost</td>
+<td><div class="docs-bg-ghost black"><a href="#" class="btn btn-black btn-ghost">Click here</a></div></td>
+<td><code>&lt;a href=&quot;#&quot; class=&quot;btn btn-black btn-ghost&quot;&gt;Click here&lt;/a&gt;</code></td>
+</tr>
+</tbody></table>
+
+<h3>Icon inside Buttons</h3>
+
+<p>See below for examples.</p>
+
+<table><thead>
+<tr>
+<th>Type</th>
+<th>Example</th>
+<th>HTML</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>appear first</td>
+<td><a href="#" class="btn btn-red"><span class="icon icon-play-2"></span><span>Play video</span></a></div></td>
+<td><code>&lt;a href=&quot;#&quot; class=&quot;btn btn-red&quot;&gt;&lt;span class=&quot;icon icon-play-2&quot;&gt;&lt;/span&gt;&lt;span&gt;Play video&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;</code></td>
+</tr>
+<tr>
+<td>appear last</td>
+<td><a href="#" class="btn btn-red"><span>Play video</span><span class="icon icon-play-2"></span></a></div></td>
+<td><code>&lt;a href=&quot;#&quot; class=&quot;btn btn-red&quot;&gt;&lt;span&gt;Play video&lt;/span&gt;&lt;span class=&quot;icon icon-play-2&quot;&gt;&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;</code></td>
+</tr>
+</tbody></table>
+
+<h3>Large Buttons</h3>
+
+<p>For larger buttons, apply btn--lg to the button anchor.</p>
+
+<table><thead>
+<tr>
+<th>Type</th>
+<th>Classes to use</th>
+<th>Example</th>
+<th>HTML</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Large button</td>
+<td>.btn<br>.btn--lg</td>
+<td><a href="#" class="btn btn-red btn--lg">Click here</a></td>
+<td><code>&lt;a href=&quot;#&quot; class=&quot;btn btn-red btn--lg&quot;&gt;Click here&lt;/a&gt;</code></td>
+</tr>
+</tbody></table>
+
+<h3>Graphical Buttons</h3>
+
+<p>For graphical buttons, apply the following classes based on your use case.</p>
+
+<table><thead>
+<tr>
+<th>Type</th>
+<th>Classes to use</th>
+<th>Example</th>
+<th>HTML</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>iTunes button</td>
+<td>.btn<br>.btn--itunes</td>
+<td><a style="padding:0;" href="#" class="btn btn--itunes"></a></td>
+<td><code>&lt;a href=&quot;#&quot; class=&quot;btn btn--itunes&quot;&gt;Click here&lt;/a&gt;</code></td>
+</tr>
+</tbody></table>
+
+<h1 id="Inline text links">Inline text links</h1>
+
+<h2>Link usage</h2>
+
+<p>Links should be wrapped in &#39;p&#39; tags for semantic markup. Please use the colour class you wish the link to be as below for the underline colour of the link. </p>
+
+<p>On the wrapping &#39;p&#39; tag, add the class for the size it should be as the bottom three examples demonstrate. Font weight can also be changed in the same way by using .type--semibold.</p>
+
+<p>There are two main link states below, inline and on their own. The inline links are shown first and the links on their own are displayed after. </p>
+
+<h3>Inline Links</h3>
+
+<p>For links within paragraphs please use the inline variation of the link. E.g.
+<p>Lorem ipsum <a class="link--inline-orange" href="#">Inline orange link</a> dolor.</p></p>
+
+<h3>Standalone Links</h3>
+
+<p>For standalone links please use the normal link variation. This is primarily for CTA type links:
+<p><a class="link--orange" href="#">Standalone</a></p>
+<br>
+<br></p>
+
+<table><thead>
+<tr>
+<th>Type</th>
+<th>Modifier Class</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><a class="link--inline-pink" href="#">Pink Link</a></td>
+<td>&#39;.link--inline-pink&#39;</td>
+</tr>
+<tr>
+<td><a class="link--inline-orange" href="#">Orange Link</a></td>
+<td>&#39;.link--inline-orange&#39;</td>
+</tr>
+<tr>
+<td><a class="link--inline-red" href="#">Red Link</a></td>
+<td>&#39;.link--inline-red&#39;</td>
+</tr>
+<tr>
+<td><a class="link--inline-purple" href="#">Purple Link</a></td>
+<td>&#39;.link--inline-purple&#39;</td>
+</tr>
+<tr>
+<td><a class="link--inline-blue" href="#">Blue Link</a></td>
+<td>&#39;.link--inline-blue&#39;</td>
+</tr>
+<tr>
+<td><a class="link--inline-aqua" href="#">Aqua Link</a></td>
+<td>&#39;.link--inline-aqua&#39;</td>
+</tr>
+<tr>
+<td><a class="link--inline-green" href="#">Green Link</a></td>
+<td>&#39;.link--inline-green&#39;</td>
+</tr>
+<tr>
+<td><a class="link--inline-yellow" href="#">Yellow Link</a></td>
+<td>&#39;.link--inline-yellow&#39;</td>
+</tr>
+<tr>
+<td><a class="link--inline-grey" href="#">Grey Link</a></td>
+<td>&#39;.link--inline-grey&#39;</td>
+</tr>
+<tr>
+<td><a class="link--inline-black" href="#">Black Link</a></td>
+<td>&#39;.link--inline-black&#39;</td>
+</tr>
+<tr>
+<td><p class="type--white"><a class="link--inline-white" href="#">White link</a></p></td>
+<td>&#39;p.type--white .link--inline-white&#39;</td>
+</tr>
+<tr>
+<td><p class="type--xl"><a class="link--inline-green" href="#">Green Link</a><p></td>
+<td>&#39;.type--xl&#39;</td>
+</tr>
+<tr>
+<td><p class="type--lg"><a class="link--inline-green" href="#">Green Link</a></p></td>
+<td>&#39;.type--lg&#39;</td>
+</tr>
+<tr>
+<td><p><a class="link--inline-green" href="#">Green Link</a></p></td>
+<td>&#39;p&#39;</td>
+</tr>
+<tr>
+<td><p class="type--white"><a href="#" class="link--inline-green">Green link</a></p></td>
+<td>&#39;p.type--white .link--inline-green&#39;</td>
+</tr>
+<tr>
+<td><p><a href="#" class="type--white inline-link-green">Green link</a></p></td>
+<td>&#39;a.type--white .link--inline-green&#39;</td>
+</tr>
+<tr>
+<td><p class="type--semibold"><a href="#" class="link--inline-red">Red Link</a></p></td>
+<td>&#39;.type--semibold .link--inline-red&#39;</td>
+</tr>
+<tr>
+<td><a class="link--pink" href="#">Pink Link</a></td>
+<td>&#39;.link-pink&#39;</td>
+</tr>
+<tr>
+<td><a class="link--orange" href="#">Orange Link</a></td>
+<td>&#39;.link-orange&#39;</td>
+</tr>
+<tr>
+<td><a class="link--red" href="#">Red Link</a></td>
+<td>&#39;.link-red&#39;</td>
+</tr>
+<tr>
+<td><a class="link--purple" href="#">Purple Link</a></td>
+<td>&#39;.link-purple&#39;</td>
+</tr>
+<tr>
+<td><a class="link--blue" href="#">Blue Link</a></td>
+<td>&#39;.link-blue&#39;</td>
+</tr>
+<tr>
+<td><a class="link--aqua" href="#">Aqua Link</a></td>
+<td>&#39;.link-aqua&#39;</td>
+</tr>
+<tr>
+<td><a class="link--green" href="#">Green Link</a></td>
+<td>&#39;.link-green&#39;</td>
+</tr>
+<tr>
+<td><a class="link--yellow" href="#">Yellow Link</a></td>
+<td>&#39;.link-yellow&#39;</td>
+</tr>
+<tr>
+<td><a class="link--grey" href="#">Grey Link</a></td>
+<td>&#39;.link-grey&#39;</td>
+</tr>
+<tr>
+<td><a class="link--black" href="#">Black Link</a></td>
+<td>&#39;.link-black&#39;</td>
+</tr>
+<tr>
+<td><p class="type--white"><a class="link--white">White link</a></p></td>
+<td>&#39;p.type--white .link--white&#39;</td>
+</tr>
+<tr>
+<td><p class="type--xl"><a class="link--green" href="#">Green Link</a><p></td>
+<td>&#39;.type--xl&#39;</td>
+</tr>
+<tr>
+<td><p class="type--lg"><a class="link--green" href="#">Green Link</a></p></td>
+<td>&#39;.type--lg&#39;</td>
+</tr>
+<tr>
+<td><p><a class="link--green" href="#">Green Link</a></p></td>
+<td>&#39;p&#39;</td>
+</tr>
+<tr>
+<td><p class="type--white"><a href="#" class="link--green">Green link</a></p></td>
+<td>&#39;p.type--white .link-green&#39;</td>
+</tr>
+<tr>
+<td><p><a href="#" class="type--white link--green">Green link</a></p></td>
+<td>&#39;a.type--white .link-green&#39;</td>
+</tr>
+<tr>
+<td><p class="type--semibold"><a href="#" class="link--red">Red Link</a></p></td>
+<td>&#39;.type--semibold .link-red&#39;</td>
+</tr>
+<tr>
+<td><p class="type--semibold"><a href="#" class="link--red">Red Link</a></p></td>
+<td>&#39;.type--semibold .link-red&#39;</td>
+</tr>
+<tr>
+<td><p class="type--lg type--black"><a href="#" class="link--grey link--back">Back link</a></p></td>
+<td>&#39;.type--lg .type--black .link--grey .link--back&#39;</td>
+</tr>
+<tr>
+<td><p class="type--lg type--black"><a href="#" class="link--grey link--previous">Previous link</a></p></td>
+<td>.type--lg .type--black .link--grey .link--previous&#39;</td>
+</tr>
+<tr>
+<td><p class="type--lg type--black"><a href="#" class="link--grey link--next">Next link</a></p></td>
+<td>.type--lg .type--black .link--grey .link--next&#39;</td>
+</tr>
+</tbody></table>
+
+        </div>
+      </div>
+    </div>
+
+    <footer class="crlib-footer">
+     
+    </footer>  
+  </div>
+
+  <script src="js/vendors.min.js"></script>
+  <script type="text/javascript">
+    var jQuery_no_conflict = $.noConflict(true);
+  </script>
+  <script src="js/main.js"></script>
+  <script type="text/javascript">
+    function TypeaheadCtrl($scope) {
+      $scope.selected = undefined;
+      $scope.searchData = 
+      [
+        
+          
+        
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Badge",
+              "breadcrumb": "Molecules - Badge > Badge",
+              "path": "molecules_-_badge.html#Badge"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "BG Colors",
+              "breadcrumb": "Atoms - Colours > BG Colors",
+              "path": "atoms_-_colours.html#BG Colors"
+              },
+            
+              
+              
+              {
+              "title": "Colour palette",
+              "breadcrumb": "Atoms - Colours > Colour palette",
+              "path": "atoms_-_colours.html#Colour palette"
+              },
+            
+              
+              
+              {
+              "title": "Kids BG Colors",
+              "breadcrumb": "Atoms - Colours > Kids BG Colors",
+              "path": "atoms_-_colours.html#Kids BG Colors"
+              },
+            
+              
+              
+              {
+              "title": "Story BG Colors",
+              "breadcrumb": "Atoms - Colours > Story BG Colors",
+              "path": "atoms_-_colours.html#Story BG Colors"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Buttons",
+              "breadcrumb": "Atoms - CTAs > Buttons",
+              "path": "atoms_-_ctas.html#buttons"
+              },
+            
+              
+              
+              {
+              "title": "Inline text links",
+              "breadcrumb": "Atoms - CTAs > Inline text links",
+              "path": "atoms_-_ctas.html#Inline text links"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Form elements",
+              "breadcrumb": "Atoms - Form elments > Form elements",
+              "path": "atoms_-_form_elments.html#Form elements"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Grid gutter",
+              "breadcrumb": "Atoms - Grid > Grid gutter",
+              "path": "atoms_-_grid.html#Grid gutter"
+              },
+            
+              
+              
+              {
+              "title": "Grid sizes",
+              "breadcrumb": "Atoms - Grid > Grid sizes",
+              "path": "atoms_-_grid.html#Grid sizes"
+              },
+            
+              
+              
+              {
+              "title": "Mixed grids",
+              "breadcrumb": "Atoms - Grid > Mixed grids",
+              "path": "atoms_-_grid.html#Mixed grids"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "HR",
+              "breadcrumb": "Atoms - Typography > HR",
+              "path": "atoms_-_typography.html#HR"
+              },
+            
+              
+              
+              {
+              "title": "Paragraph styles/Sizes",
+              "breadcrumb": "Atoms - Typography > Paragraph styles/Sizes",
+              "path": "atoms_-_typography.html#Paragraph styles/Sizes"
+              },
+            
+              
+              
+              {
+              "title": "Titles",
+              "breadcrumb": "Atoms - Typography > Titles",
+              "path": "atoms_-_typography.html#Titles"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Icon font",
+              "breadcrumb": "Atoms - Icons > Icon font",
+              "path": "atoms_-_icons.html#Icon font"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Lists",
+              "breadcrumb": "Atoms - Tables and lists > Lists",
+              "path": "atoms_-_tables_and_lists.html#Lists"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Pane Image",
+              "breadcrumb": "Organisims - Panes > Pane Image",
+              "path": "organisims_-_panes.html#Pane Image"
+              },
+            
+              
+              
+              {
+              "title": "Pane SVG",
+              "breadcrumb": "Organisims - Panes > Pane SVG",
+              "path": "organisims_-_panes.html#Pane SVG"
+              },
+            
+              
+              
+              {
+              "title": "Pane Text",
+              "breadcrumb": "Organisims - Panes > Pane Text",
+              "path": "organisims_-_panes.html#Pane Text"
+              },
+            
+              
+              
+              {
+              "title": "Pane Video",
+              "breadcrumb": "Organisims - Panes > Pane Video",
+              "path": "organisims_-_panes.html#Pane Video"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Rows",
+              "breadcrumb": "Organisims - Rows > Rows",
+              "path": "organisims_-_rows.html#Rows"
+              },
+            
+          
+        
+      {}];
+      $scope.onSelect = function ($item, $model, $label) {
+        window.location.replace($item.path);
+      };
+    }
+  </script>
+  <script type="text/ng-template" id="customTemplate.html">
+    <a href="{{match.model.path}}">
+      <p class="crlib-search-title">{{match.model.title}}</p>
+      <p class="crlib-search-path">{{match.model.breadcrumb}}</p>
+    </a>
+  </script>
+  
+  <!-- Source Components -->
+  
+</body>
+</html>

@@ -1,0 +1,922 @@
+
+<!DOCTYPE html>
+<html ng-app="crlib">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Atoms - Icons</title>
+
+    <!-- Styleguide CSS -->
+    <link rel="stylesheet" href="css/styleguide.css">
+
+    <!-- Source CSS -->
+    
+      
+        <link rel="stylesheet" href="../css/crlib.styles.css">
+      
+    
+
+    <!--[if lt IE 9]>
+      <script src="js/polyfill/html5shiv.js"></script>
+      <script src="js/polyfill/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+  <body class="crlib-body"  ng-controller="MainController">
+
+    <div class="sb-slidebar sb-left crlib-sidenav sb-style-push">
+
+      
+      
+        
+        
+          
+        
+      
+        
+        
+          
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+          
+        
+      
+        
+        
+      
+
+      <nav class="crlib-nav">
+        <ul>
+          
+            <li><a href="index.html">Home</a></li>
+          
+        </ul>
+        
+        <div class="crlib-cat">
+          <h3 class="crlib-cat--molecules">Molecules</h3>
+          <span class="crlib-inline crlib-inline--molecules">
+        </div>
+          <ul>
+          
+            
+              
+              
+                <li><a href="molecules_-_badge.html">Badge</a></li>
+              
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+          </ul>
+        
+        <div class="crlib-cat">
+          <h3 class="crlib-cat--atoms">Atoms</h3>
+          <span class="crlib-inline crlib-inline--atoms">
+        </div>
+          <ul>
+          
+            
+          
+            
+              
+              
+                <li><a href="atoms_-_colours.html">Colours</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="atoms_-_ctas.html">CTAs</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="atoms_-_form_elments.html">Form elments</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="atoms_-_grid.html">Grid</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="atoms_-_typography.html">Typography</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a class="active" href="atoms_-_icons.html">Icons</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="atoms_-_tables_and_lists.html">Tables and lists</a></li>
+              
+            
+          
+            
+          
+            
+          
+          </ul>
+        
+        <div class="crlib-cat">
+          <h3 class="crlib-cat--organisims">Organisims</h3>
+          <span class="crlib-inline crlib-inline--organisims">
+        </div>
+          <ul>
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+              
+                <li><a href="organisims_-_panes.html">Panes</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="organisims_-_rows.html">Rows</a></li>
+              
+            
+          
+          </ul>
+        
+      </nav>
+    </div>
+
+    <div class="crlib-header sb-slide">
+        <span class="crlib-logo">PATTERN LIBRARY</span>
+      <div id="open-left" class="crlib-menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="crlib-search-wrapper" ng-controller="TypeaheadCtrl">
+        <input id="crlib-search" type="text" class="form-control crlib-search" ng-model="customSelected" placeholder="Search" typeahead="data as data.title for data in searchData | filter:{title:$viewValue}" typeahead-template-url="customTemplate.html" class="form-control" typeahead-on-select="onSelect($item, $model, $label)">
+      </div>
+    </div>
+
+    <div id="sb-site">
+
+      <div class="crlib-container">
+
+        <nav id="crlib-inside-nav" class="crlib-inside-nav" bs-affix>
+          <h2 class="">Icons</h2>
+          <ul bs-scrollspy-list data-offset="-30">
+            
+              
+                <li><a href="#Icon font">Icon font</a></li>
+              
+            
+          </ul>
+        </nav>
+
+        <div class="crlib-content-wrapper clearfix">
+          <div class="crlib-content">
+            <div class="crlib-inline crlib-inline--red">123</div>
+            <div class="crlib-inline crlib-inline--blue">123</div>
+            <div class="crlib-inline crlib-inline--yellow">123</div><h1 id="Icon font">Icon font</h1>
+
+<p>Using IcoMoon, we&#39;ve created an updateable icon font to use across the site.<br><br></p>
+
+<p>Usage is as simple as applying the &#39;icon&#39; class and the &#39;icon-[NAME]&#39; class to a span (or anchor wrapping a span) to choose the icon used. If you need the larger size, also add the &#39;icon--large&#39; class.<br><br></p>
+
+<p>These font-sizes (32px default, 54px large) don&#39;t change over breakpoints, as discussed with Dan Ridge.<br><br></p>
+
+<p>See the examples below, check out the wiki documentation for full documentation here under &#39;Icons&#39;:<br>http://wiki.comicrelief.com/index.php?title=RND15<em>Technical</em>Documentation#SASS_Components
+<br><br></p>
+
+<h3>Icons</h3>
+
+<table><thead>
+<tr>
+<th>Icon name</th>
+<th>Classes to use</th>
+<th>Example</th>
+<th>HTML</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Zoom large</td>
+<td>.icon <br>.icon-zoom<br>.icon--large</td>
+<td><span class="icon-zoom icon--large icon-styleguide"></span></td>
+<td><code>&lt;span class=&quot;icon icon-zoom icon--large&quot;&gt;&lt;/span&gt;</code></td>
+</tr>
+<tr>
+<td>Zoom</td>
+<td>.icon <br>.icon-zoom</td>
+<td><span class="icon-zoom icon-styleguide"></span></td>
+<td><code>&lt;span class=&quot;icon icon-zoom &quot;&gt;&lt;/span&gt;</code></td>
+</tr>
+<tr>
+<td>search large</td>
+<td>.icon <br>.icon-search<br>.icon--large</td>
+<td><span class="icon-search icon--large icon-styleguide"></span></td>
+<td><code>&lt;span class=&quot;icon icon-search icon--large&quot;&gt;&lt;/span&gt;</code></td>
+</tr>
+<tr>
+<td>search</td>
+<td>.icon <br>.icon-search<br></td>
+<td><span class="icon-search  icon-styleguide"></span></td>
+<td><code>&lt;span class=&quot;icon icon-search &quot;&gt;&lt;/span&gt;</code></td>
+</tr>
+<tr>
+<td>help large</td>
+<td>.icon <br>.icon-help<br>.icon--large</td>
+<td><span class="icon-help icon--large icon-styleguide "></span></td>
+<td><code>&lt;span class=&quot;icon icon-help icon--large&quot;&gt;&lt;/span&gt;</code></td>
+</tr>
+<tr>
+<td>help</td>
+<td>.icon <br>.icon-help<br></td>
+<td><span class="icon-help  icon-styleguide"></span></td>
+<td><code>&lt;span class=&quot;icon icon-help &quot;&gt;&lt;/span&gt;</code></td>
+</tr>
+<tr>
+<td>basket large</td>
+<td>.icon <br>.icon-basket<br>.icon--large</td>
+<td><span class="icon-basket icon--large icon-styleguide"></span></td>
+<td><code>&lt;span class=&quot;icon icon-basket icon--large&quot;&gt;&lt;/span&gt;</code></td>
+</tr>
+<tr>
+<td>basket</td>
+<td>.icon <br>.icon-basket<br></td>
+<td><span class="icon-basket  icon-styleguide"></span></td>
+<td><code>&lt;span class=&quot;icon icon-basket &quot;&gt;&lt;/span&gt;</code></td>
+</tr>
+<tr>
+<td>calendar large</td>
+<td>.icon <br>.icon-calendar<br>.icon--large</td>
+<td><span class="icon-calendar icon--large icon-styleguide"></span></td>
+<td><code>&lt;span class=&quot;icon icon-calendar icon--large&quot;&gt;&lt;/span&gt;</code></td>
+</tr>
+<tr>
+<td>calendar</td>
+<td>.icon <br>.icon-calendar<br></td>
+<td><span class="icon-calendar  icon-styleguide"></span></td>
+<td><code>&lt;span class=&quot;icon icon-calendar &quot;&gt;&lt;/span&gt;</code></td>
+</tr>
+<tr>
+<td>email large</td>
+<td>.icon <br>.icon-email<br>.icon--large</td>
+<td><span class="icon-email icon--large icon-styleguide"></span></td>
+<td><code>&lt;span class=&quot;icon icon-email icon--large&quot;&gt;&lt;/span&gt;</code></td>
+</tr>
+<tr>
+<td>email</td>
+<td>.icon <br>.icon-email<br></td>
+<td><span class="icon-email  icon-styleguide"></span></td>
+<td><code>&lt;span class=&quot;icon icon-email &quot;&gt;&lt;/span&gt;</code></td>
+</tr>
+<tr>
+<td>pause large</td>
+<td>.icon <br>.icon-pause<br>.icon--large</td>
+<td><span class="icon-pause icon--large icon-styleguide"></span></td>
+<td><code>&lt;span class=&quot;icon icon-pause icon--large&quot;&gt;&lt;/span&gt;</code></td>
+</tr>
+<tr>
+<td>pause</td>
+<td>.icon <br>.icon-pause<br></td>
+<td><span class="icon-pause  icon-styleguide"></span></td>
+<td><code>&lt;span class=&quot;icon icon-pause &quot;&gt;&lt;/span&gt;</code></td>
+</tr>
+<tr>
+<td>stop large</td>
+<td>.icon <br>.icon-stop<br>.icon--large</td>
+<td><span class="icon-stop icon--large icon-styleguide"></span></td>
+<td><code>&lt;span class=&quot;icon icon-stop icon--large&quot;&gt;&lt;/span&gt;</code></td>
+</tr>
+<tr>
+<td>stop</td>
+<td>.icon <br>.icon-stop<br></td>
+<td><span class="icon-stop  icon-styleguide"></span></td>
+<td><code>&lt;span class=&quot;icon icon-stop &quot;&gt;&lt;/span&gt;</code></td>
+</tr>
+<tr>
+<td>play-1 large</td>
+<td>.icon <br>.icon-play-1<br>.icon--large</td>
+<td><span class="icon-play-1 icon--large icon-styleguide"></span></td>
+<td><code>&lt;span class=&quot;icon icon-play-1 icon--large&quot;&gt;&lt;/span&gt;</code></td>
+</tr>
+<tr>
+<td>play-1</td>
+<td>.icon <br>.icon-play-1<br></td>
+<td><span class="icon-play-1  icon-styleguide"></span></td>
+<td><code>&lt;span class=&quot;icon icon-play-1 &quot;&gt;&lt;/span&gt;</code></td>
+</tr>
+<tr>
+<td>play-2 large</td>
+<td>.icon <br>.icon-play-2<br>.icon--large</td>
+<td><span class="icon-play-2 icon--large icon-styleguide"></span></td>
+<td><code>&lt;span class=&quot;icon icon-play-2 icon--large&quot;&gt;&lt;/span&gt;</code></td>
+</tr>
+<tr>
+<td>play-2</td>
+<td>.icon <br>.icon-play-2<br></td>
+<td><span class="icon-play-2  icon-styleguide"></span></td>
+<td><code>&lt;span class=&quot;icon icon-play-2 &quot;&gt;&lt;/span&gt;</code></td>
+</tr>
+<tr>
+<td>mobile-nav large</td>
+<td>.icon <br>.icon-mobile-nav<br>.icon--large</td>
+<td><span class="icon-mobile-nav icon--large icon-styleguide"></span></td>
+<td><code>&lt;span class=&quot;icon icon-mobile-nav icon--large&quot;&gt;&lt;/span&gt;</code></td>
+</tr>
+<tr>
+<td>mobile-nav</td>
+<td>.icon <br>.icon-mobile-nav<br></td>
+<td><span class="icon-mobile-nav  icon-styleguide"></span></td>
+<td><code>&lt;span class=&quot;icon icon-mobile-nav &quot;&gt;&lt;/span&gt;</code></td>
+</tr>
+<tr>
+<td>tick large</td>
+<td>.icon <br>.icon-tick<br>.icon--large</td>
+<td><span class="icon-tick icon--large icon-styleguide"></span></td>
+<td><code>&lt;span class=&quot;icon icon-tick icon--large&quot;&gt;&lt;/span&gt;</code></td>
+</tr>
+<tr>
+<td>tick</td>
+<td>.icon <br>.icon-tick<br></td>
+<td><span class="icon-tick  icon-styleguide"></span></td>
+<td><code>&lt;span class=&quot;icon icon-tick &quot;&gt;&lt;/span&gt;</code></td>
+</tr>
+<tr>
+<td>cross large</td>
+<td>.icon <br>.icon-cross<br>.icon--large</td>
+<td><span class="icon-cross icon--large icon-styleguide"></span></td>
+<td><code>&lt;span class=&quot;icon icon-cross icon--large&quot;&gt;&lt;/span&gt;</code></td>
+</tr>
+<tr>
+<td>cross</td>
+<td>.icon <br>.icon-cross<br></td>
+<td><span class="icon-cross  icon-styleguide"></span></td>
+<td><code>&lt;span class=&quot;icon icon-cross &quot;&gt;&lt;/span&gt;</code></td>
+</tr>
+<tr>
+<td>plus large</td>
+<td>.icon <br>.icon-plus<br>.icon--large</td>
+<td><span class="icon-plus icon--large icon-styleguide"></span></td>
+<td><code>&lt;span class=&quot;icon icon-plus icon--large&quot;&gt;&lt;/span&gt;</code></td>
+</tr>
+<tr>
+<td>plus</td>
+<td>.icon <br>.icon-plus<br></td>
+<td><span class="icon-plus  icon-styleguide"></span></td>
+<td><code>&lt;span class=&quot;icon icon-plus &quot;&gt;&lt;/span&gt;</code></td>
+</tr>
+<tr>
+<td>minus large</td>
+<td>.icon <br>.icon-minus<br>.icon--large</td>
+<td><span class="icon-minus icon--large icon-styleguide"></span></td>
+<td><code>&lt;span class=&quot;icon icon-minus icon--large&quot;&gt;&lt;/span&gt;</code></td>
+</tr>
+<tr>
+<td>minus</td>
+<td>.icon <br>.icon-minus<br></td>
+<td><span class="icon-minus  icon-styleguide"></span></td>
+<td><code>&lt;span class=&quot;icon icon-minus &quot;&gt;&lt;/span&gt;</code></td>
+</tr>
+<tr>
+<td>arrow-down large</td>
+<td>.icon <br>.icon-arrow-down<br>.icon--large</td>
+<td><span class="icon-arrow-down icon--large icon-styleguide"></span></td>
+<td><code>&lt;span class=&quot;icon icon-arrow-down icon--large&quot;&gt;&lt;/span&gt;</code></td>
+</tr>
+<tr>
+<td>arrow-down</td>
+<td>.icon <br>.icon-arrow-down<br></td>
+<td><span class="icon-arrow-down  icon-styleguide"></span></td>
+<td><code>&lt;span class=&quot;icon icon-arrow-down &quot;&gt;&lt;/span&gt;</code></td>
+</tr>
+<tr>
+<td>arrow-up large</td>
+<td>.icon <br>.icon-arrow-up<br>.icon--large</td>
+<td><span class="icon-arrow-up icon--large icon-styleguide"></span></td>
+<td><code>&lt;span class=&quot;icon icon-arrow-up icon--large&quot;&gt;&lt;/span&gt;</code></td>
+</tr>
+<tr>
+<td>arrow-up</td>
+<td>.icon <br>.icon-arrow-up<br></td>
+<td><span class="icon-arrow-up  icon-styleguide"></span></td>
+<td><code>&lt;span class=&quot;icon icon-arrow-up &quot;&gt;&lt;/span&gt;</code></td>
+</tr>
+<tr>
+<td>arrow-right large</td>
+<td>.icon <br>.icon-arrow-right<br>.icon--large</td>
+<td><span class="icon-arrow-right icon--large icon-styleguide"></span></td>
+<td><code>&lt;span class=&quot;icon icon-arrow-right icon--large&quot;&gt;&lt;/span&gt;</code></td>
+</tr>
+<tr>
+<td>arrow-right</td>
+<td>.icon <br>.icon-arrow-right<br></td>
+<td><span class="icon-arrow-right  icon-styleguide"></span></td>
+<td><code>&lt;span class=&quot;icon icon-arrow-right &quot;&gt;&lt;/span&gt;</code></td>
+</tr>
+<tr>
+<td>arrow-left large</td>
+<td>.icon <br>.icon-arrow-left<br>.icon--large</td>
+<td><span class="icon-arrow-left icon--large icon-styleguide"></span></td>
+<td><code>&lt;span class=&quot;icon icon-arrow-left icon--large&quot;&gt;&lt;/span&gt;</code></td>
+</tr>
+<tr>
+<td>arrow-left</td>
+<td>.icon <br>.icon-arrow-left<br></td>
+<td><span class="icon-arrow-left  icon-styleguide"></span></td>
+<td><code>&lt;span class=&quot;icon icon-arrow-left &quot;&gt;&lt;/span&gt;</code></td>
+</tr>
+<tr>
+<td>tumblr large</td>
+<td>.icon <br>.icon-tumblr<br>.icon--large</td>
+<td><span class="icon-tumblr icon--large icon-styleguide"></span></td>
+<td><code>&lt;span class=&quot;icon icon-tumblr icon--large&quot;&gt;&lt;/span&gt;</code></td>
+</tr>
+<tr>
+<td>tumblr</td>
+<td>.icon <br>.icon-tumblr<br></td>
+<td><span class="icon-tumblr  icon-styleguide"></span></td>
+<td><code>&lt;span class=&quot;icon icon-tumblr &quot;&gt;&lt;/span&gt;</code></td>
+</tr>
+<tr>
+<td>Instagram large</td>
+<td>.icon <br>.icon-instagram<br>.icon--large</td>
+<td><span class="icon-instagram icon--large icon-styleguide"></span></td>
+<td><code>&lt;span class=&quot;icon icon-instagram icon--large&quot;&gt;&lt;/span&gt;</code></td>
+</tr>
+<tr>
+<td>Instagram</td>
+<td>.icon <br>.icon-instagram<br></td>
+<td><span class="icon-instagram  icon-styleguide"></span></td>
+<td><code>&lt;span class=&quot;icon icon-instagram &quot;&gt;&lt;/span&gt;</code></td>
+</tr>
+<tr>
+<td>youtube large</td>
+<td>.icon <br>.icon-youtube<br>.icon--large</td>
+<td><span class="icon-youtube icon--large icon-styleguide"></span></td>
+<td><code>&lt;span class=&quot;icon icon-youtube icon--large&quot;&gt;&lt;/span&gt;</code></td>
+</tr>
+<tr>
+<td>youtube</td>
+<td>.icon <br>.icon-youtube<br></td>
+<td><span class="icon-youtube  icon-styleguide"></span></td>
+<td><code>&lt;span class=&quot;icon icon-youtube &quot;&gt;&lt;/span&gt;</code></td>
+</tr>
+<tr>
+<td>google-plus large</td>
+<td>.icon <br>.icon-google-plus<br>.icon--large</td>
+<td><span class="icon-google-plus icon--large icon-styleguide"></span></td>
+<td><code>&lt;span class=&quot;icon icon-google-plus icon--large&quot;&gt;&lt;/span&gt;</code></td>
+</tr>
+<tr>
+<td>google-plus</td>
+<td>.icon <br>.icon-google-plus<br></td>
+<td><span class="icon-google-plus  icon-styleguide"></span></td>
+<td><code>&lt;span class=&quot;icon icon-google-plus &quot;&gt;&lt;/span&gt;</code></td>
+</tr>
+<tr>
+<td>twitter large</td>
+<td>.icon <br>.icon-twitter<br>.icon--large</td>
+<td><span class="icon-twitter icon--large icon-styleguide"></span></td>
+<td><code>&lt;span class=&quot;icon icon-twitter icon--large&quot;&gt;&lt;/span&gt;</code></td>
+</tr>
+<tr>
+<td>twitter</td>
+<td>.icon <br>.icon-twitter<br></td>
+<td><span class="icon-twitter  icon-styleguide"></span></td>
+<td><code>&lt;span class=&quot;icon icon-twitter &quot;&gt;&lt;/span&gt;</code></td>
+</tr>
+<tr>
+<td>facebook large</td>
+<td>.icon <br>.icon-facebook<br>.icon--large</td>
+<td><span class="icon-facebook icon--large icon-styleguide"></span></td>
+<td><code>&lt;span class=&quot;icon icon-facebook icon--large&quot;&gt;&lt;/span&gt;</code></td>
+</tr>
+<tr>
+<td>facebook</td>
+<td>.icon <br>.icon-facebook<br></td>
+<td><span class="icon-facebook  icon-styleguide"></span></td>
+<td><code>&lt;span class=&quot;icon icon-facebook &quot;&gt;&lt;/span&gt;</code></td>
+</tr>
+<tr>
+<td>circle large</td>
+<td>.icon <br>.icon-circle<br>.icon--large</td>
+<td><span class="icon-circle icon--large icon-styleguide"></span></td>
+<td><code>&lt;span class=&quot;icon icon-circle icon--large&quot;&gt;&lt;/span&gt;</code></td>
+</tr>
+<tr>
+<td>circle</td>
+<td>.icon <br>.icon-circle<br></td>
+<td><span class="icon-circle  icon-styleguide"></span></td>
+<td><code>&lt;span class=&quot;icon icon-circle &quot;&gt;&lt;/span&gt;</code></td>
+</tr>
+<tr>
+<td>circle-stroke large</td>
+<td>.icon<br> .icon-circle-stroke<br>.icon--large</td>
+<td><span class="icon-circle-stroke icon--large icon-styleguide"></span></td>
+<td><code>&lt;span class=&quot;icon icon-circle-stroke icon--large&quot;&gt;&lt;/span&gt;</code></td>
+</tr>
+<tr>
+<td>circle-stroke</td>
+<td>.icon<br> .icon-circle-stroke<br></td>
+<td><span class="icon-circle-stroke  icon-styleguide"></span></td>
+<td><code>&lt;span class=&quot;icon icon-circle-stroke &quot;&gt;&lt;/span&gt;</code></td>
+</tr>
+<tr>
+<td>close-circle large</td>
+<td>.icon<br> .icon-close-circle<br>.icon--large</td>
+<td><span class="icon-close-circle icon--large icon-styleguide"></span></td>
+<td><code>&lt;span class=&quot;icon icon-close-circle icon--large&quot;&gt;&lt;/span&gt;</code></td>
+</tr>
+<tr>
+<td>close-circle</td>
+<td>.icon<br> .icon-close-circle<br></td>
+<td><span class="icon-close-circle  icon-styleguide"></span></td>
+<td><code>&lt;span class=&quot;icon icon-close-circle &quot;&gt;&lt;/span&gt;</code></td>
+</tr>
+<tr>
+<td>close-cross large</td>
+<td>.icon<br> .icon-close-cross<br>.icon--large</td>
+<td><span class="icon-close-cross icon--large icon-styleguide"></span></td>
+<td><code>&lt;span class=&quot;icon icon-close-cross icon--large&quot;&gt;&lt;/span&gt;</code></td>
+</tr>
+<tr>
+<td>close-cross</td>
+<td>.icon<br> .icon-close-cross<br></td>
+<td><span class="icon-close-cross  icon-styleguide"></span></td>
+<td><code>&lt;span class=&quot;icon icon-close-cross &quot;&gt;&lt;/span&gt;</code></td>
+</tr>
+<tr>
+<td>close-circle-hover large</td>
+<td>.icon<br> .icon-close-circle-hover<br>.icon--large</td>
+<td><span class="icon-close-circle-hover icon--large icon-styleguide"></span></td>
+<td><code>&lt;span class=&quot;icon icon-close-circle-hover icon--large&quot;&gt;&lt;/span&gt;</code></td>
+</tr>
+<tr>
+<td>close-circle-hover</td>
+<td>.icon<br> .icon-close-circle-hover<br></td>
+<td><span class="icon-close-circle-hover  icon-styleguide"></span></td>
+<td><code>&lt;span class=&quot;icon icon-close-circle-hover &quot;&gt;&lt;/span&gt;</code></td>
+</tr>
+<tr>
+<td>exclaimation-mark large</td>
+<td>.icon<br> .icon-exclaimation-mark<br>.icon--large</td>
+<td><span class="icon-exclaimation-mark icon--large icon-styleguide"></span></td>
+<td><code>&lt;span class=&quot;icon icon-exclaimation-mark icon--large&quot;&gt;&lt;/span&gt;</code></td>
+</tr>
+<tr>
+<td>exclaimation-mark</td>
+<td>.icon<br> .icon-exclaimation-mark<br></td>
+<td><span class="icon-exclaimation-mark  icon-styleguide"></span></td>
+<td><code>&lt;span class=&quot;icon icon-exclaimation-mark &quot;&gt;&lt;/span&gt;</code></td>
+</tr>
+<tr>
+<td>help-circle large</td>
+<td>.icon<br> .icon-help-circle<br>.icon--large</td>
+<td><span class="icon-help-circle icon--large icon-styleguide"></span></td>
+<td><code>&lt;span class=&quot;icon icon-help-circle icon--large&quot;&gt;&lt;/span&gt;</code></td>
+</tr>
+<tr>
+<td>help-circle</td>
+<td>.icon<br> .icon-help-circle<br></td>
+<td><span class="icon-help-circle  icon-styleguide"></span></td>
+<td><code>&lt;span class=&quot;icon icon-help-circle &quot;&gt;&lt;/span&gt;</code></td>
+</tr>
+<tr>
+<td>help-question-mark large</td>
+<td>.icon<br> .icon-help-question-mark<br>.icon--large</td>
+<td><span class="icon-help-question-mark icon--large icon-styleguide"></span></td>
+<td><code>&lt;span class=&quot;icon icon-help-question-mark icon--large&quot;&gt;&lt;/span&gt;</code></td>
+</tr>
+<tr>
+<td>help-question-mark</td>
+<td>.icon<br> .icon-help-question-mark<br></td>
+<td><span class="icon-help-question-mark  icon-styleguide"></span></td>
+<td><code>&lt;span class=&quot;icon icon-help-question-mark &quot;&gt;&lt;/span&gt;</code></td>
+</tr>
+<tr>
+<td>pen large</td>
+<td>.icon<br> .icon-pen<br>.icon--large</td>
+<td><span class="icon-pen icon--large icon-styleguide"></span></td>
+<td><code>&lt;span class=&quot;icon icon-pen icon--large&quot;&gt;&lt;/span&gt;</code></td>
+</tr>
+<tr>
+<td>pen</td>
+<td>.icon<br> .icon-pen<br></td>
+<td><span class="icon-pen  icon-styleguide"></span></td>
+<td><code>&lt;span class=&quot;icon icon-pen &quot;&gt;&lt;/span&gt;</code></td>
+</tr>
+</tbody></table>
+
+        </div>
+      </div>
+    </div>
+
+    <footer class="crlib-footer">
+     
+    </footer>  
+  </div>
+
+  <script src="js/vendors.min.js"></script>
+  <script type="text/javascript">
+    var jQuery_no_conflict = $.noConflict(true);
+  </script>
+  <script src="js/main.js"></script>
+  <script type="text/javascript">
+    function TypeaheadCtrl($scope) {
+      $scope.selected = undefined;
+      $scope.searchData = 
+      [
+        
+          
+        
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Badge",
+              "breadcrumb": "Molecules - Badge > Badge",
+              "path": "molecules_-_badge.html#Badge"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "BG Colors",
+              "breadcrumb": "Atoms - Colours > BG Colors",
+              "path": "atoms_-_colours.html#BG Colors"
+              },
+            
+              
+              
+              {
+              "title": "Colour palette",
+              "breadcrumb": "Atoms - Colours > Colour palette",
+              "path": "atoms_-_colours.html#Colour palette"
+              },
+            
+              
+              
+              {
+              "title": "Kids BG Colors",
+              "breadcrumb": "Atoms - Colours > Kids BG Colors",
+              "path": "atoms_-_colours.html#Kids BG Colors"
+              },
+            
+              
+              
+              {
+              "title": "Story BG Colors",
+              "breadcrumb": "Atoms - Colours > Story BG Colors",
+              "path": "atoms_-_colours.html#Story BG Colors"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Buttons",
+              "breadcrumb": "Atoms - CTAs > Buttons",
+              "path": "atoms_-_ctas.html#buttons"
+              },
+            
+              
+              
+              {
+              "title": "Inline text links",
+              "breadcrumb": "Atoms - CTAs > Inline text links",
+              "path": "atoms_-_ctas.html#Inline text links"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Form elements",
+              "breadcrumb": "Atoms - Form elments > Form elements",
+              "path": "atoms_-_form_elments.html#Form elements"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Grid gutter",
+              "breadcrumb": "Atoms - Grid > Grid gutter",
+              "path": "atoms_-_grid.html#Grid gutter"
+              },
+            
+              
+              
+              {
+              "title": "Grid sizes",
+              "breadcrumb": "Atoms - Grid > Grid sizes",
+              "path": "atoms_-_grid.html#Grid sizes"
+              },
+            
+              
+              
+              {
+              "title": "Mixed grids",
+              "breadcrumb": "Atoms - Grid > Mixed grids",
+              "path": "atoms_-_grid.html#Mixed grids"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "HR",
+              "breadcrumb": "Atoms - Typography > HR",
+              "path": "atoms_-_typography.html#HR"
+              },
+            
+              
+              
+              {
+              "title": "Paragraph styles/Sizes",
+              "breadcrumb": "Atoms - Typography > Paragraph styles/Sizes",
+              "path": "atoms_-_typography.html#Paragraph styles/Sizes"
+              },
+            
+              
+              
+              {
+              "title": "Titles",
+              "breadcrumb": "Atoms - Typography > Titles",
+              "path": "atoms_-_typography.html#Titles"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Icon font",
+              "breadcrumb": "Atoms - Icons > Icon font",
+              "path": "atoms_-_icons.html#Icon font"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Lists",
+              "breadcrumb": "Atoms - Tables and lists > Lists",
+              "path": "atoms_-_tables_and_lists.html#Lists"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Pane Image",
+              "breadcrumb": "Organisims - Panes > Pane Image",
+              "path": "organisims_-_panes.html#Pane Image"
+              },
+            
+              
+              
+              {
+              "title": "Pane SVG",
+              "breadcrumb": "Organisims - Panes > Pane SVG",
+              "path": "organisims_-_panes.html#Pane SVG"
+              },
+            
+              
+              
+              {
+              "title": "Pane Text",
+              "breadcrumb": "Organisims - Panes > Pane Text",
+              "path": "organisims_-_panes.html#Pane Text"
+              },
+            
+              
+              
+              {
+              "title": "Pane Video",
+              "breadcrumb": "Organisims - Panes > Pane Video",
+              "path": "organisims_-_panes.html#Pane Video"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Rows",
+              "breadcrumb": "Organisims - Rows > Rows",
+              "path": "organisims_-_rows.html#Rows"
+              },
+            
+          
+        
+      {}];
+      $scope.onSelect = function ($item, $model, $label) {
+        window.location.replace($item.path);
+      };
+    }
+  </script>
+  <script type="text/ng-template" id="customTemplate.html">
+    <a href="{{match.model.path}}">
+      <p class="crlib-search-title">{{match.model.title}}</p>
+      <p class="crlib-search-path">{{match.model.breadcrumb}}</p>
+    </a>
+  </script>
+  
+  <!-- Source Components -->
+  
+</body>
+</html>
